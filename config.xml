@@ -36,10 +36,14 @@
     <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/icon/android/screen-xhdpi-portrait.png" />
     <splash src="splash.png" />
 
-  <allow-intent href="tel:*"/>
+  <allow-intent href="tel:+2348064205333"/>
   <allow-intent href="sms:*"/>
-  <a href="mailto:*"/>
-  <a href="https://*/*"/> <!-- This take care of all the https://.... -->
+  <allow-intent href="mailto:adesung2005@yahoo.co.uk"/>
+  <allow-intent href="https://api.whatsapp.com/send?phone=2348064205333"/>
+  <allow-intent href="https://www.linkedin.com/in/sunday-adegboye-aca-046644a62"/>
+  <allow-intent href="https://www.twitter.com/adesung2005"/>
+  <allow-intent href="https://www.facebook.com/Sunny.adesung"/>
+   <!-- This take care of all the https://.... -->
   <!--<allow-intent href="*"/>     Allow all unrecognized URLs to open installed apps -->
 
   <preference name="orientation" value="portrait"/>
