@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    	<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+        <link rel="stylesheet" type="text/css" href="css/sonyApp.css">
+        <script src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/sonyApp.js"></script>
+        <script type="text/javascript">
+        	$(document).on('mobileinit', function(){
+        		$.mobile.defaultPageTransition = 'slidefade';
+        	});
+        	
+        	/*
+        	$(document).ready(function(){showMyFavs()});
+        	$(document).ready(function(){fadingVerses()});
+        	*/
+        </script>
+        <script src="js/jquery.mobile-1.4.5.js"></script>
+    </head>
+    <body id="body">
+
+<!-- Start of first page -->
+<div data-role="page" id="home">
+
+<!-- panel 
+<div data-role="panel" data-display="push" data-count-theme="a" id="nav-panel" id="favouriteSongsList2" style="background-color: #D3D3D3">
+	<h3 id="homePanelHead"> SU Songs<a data-icon="home" href="#" data-rel="close"></h3>
+	<ul data-role="listview">
+		<li data-icon="home" ><a id="hPanel-hm" href="#" data-rel="close" >Home</a></li>
+		<hr>
+		<li data-icon="bullets" ><a id="hPanel-SU" href="#page2" >SU Songs Index</a></li>
+		<hr>
+		<li data-icon="info"><a href="#page6" id="hPanel-Abt" >About</a></li>
+		<hr>
+		<li data-icon="gear"><a href="#page5" id="hPanel-Set" >Settings</a></li>
+		<hr>
+
+		<div  data-role="collapsible" data-colapsed="true" id="hPanel-Sup">
+			<h4 >Developer</h4>
+			<ul data-role="listview">
+				<li data-icon="gear"><a href="#page7">Create Songs</a></li>
+				<li data-icon="eye"><a href="#page7">View My Songs</a></li>
+			</ul>
+		</div>
+		<hr>
+		<div  data-role="collapsible" data-colapsed="true" id="hPanel-Sup">
+			<h4 >Support</h4>
+			<ul data-role="listview">
+				<li data-icon="mail"><a href="mailto:adesung2005@yahoo.co.uk">Send Feedback</a></li>
+				<li data-icon="phone"><a href="https://api.whatsapp.com/send?phone=2348064205333">Contact us</a></li>
+				<li data-icon="forward"><a href="#" >Share this app</a></li>
+				<li data-icon="star"><a href="#" >Rate this app</a></li>
+			</ul>
+		</div>
+		<hr>
+	</ul>
+</div> /panel -->
+
+<div data-role="header" data-position="fixed" id="homeHeaderBar">
+		<h4 id="homeHeaderBarTitle">The Nigerian Tax Pad</h4>
+		<!--<a href="#nav-panel" class="ui-btn ui-icon-bars ui-btn-icon-notext" id="homeHeaderIconL">bars</a>-->
+	<div data-role="navbar">
+	   	<ul>
+	     <li><a  id="myHome" href="#home" data-icon="home">Home</a></li>
+	   	</ul>    
+ 	</div>
+</div><!-- /header -->
+
+<div role="main" class="ui-content" id="homeBody">
+    <br><br>
+  	<div class="nig-Tax-System-Div nig-Tax-System-Home ">The Nigerian Tax Pad (Nig Tax Pad) is a portable summary of some of the major tax laws in Nigeria. The Pad contains a summary of the tax extant laws, a detailed PAYE Tax Calcuator for quick PIT computation and a review of the Finance Act 2019. However, the contents on this app is meant for general purpose use only. It is not a replacement for specific advice.
+      <p class="nig-Tax-System-Span"> We accept no liability for any action taken or not taken based on the contents of this app.</p>
+     </div> 
+     <br>
+  	<hr>
+    <a href="#page8" id="homeTaxBtn1"><button id="homeTaxBtn1a" data-icon="bullets">Summary of Nigeria Taxes &  Rates</button></a>
+    <hr>
+    <a href="#page3" id="homeTaxBtn2"><button id="homeTaxBtn2a" data-icon="calendar">Personal Income Tax (PIT) Calculator</button></a>
+    <hr>
+    <a href="#page7" id="homeTaxBtn3"><button id="homeTaxBtn3a" data-icon="bars">Finance Act 2019</button></a>
+   <hr>
+    <br>
+    <div class="contact-Section">
+      <p>For professional advice  and further enquiries:</p>
+            <div id="contacts1">
+              <ul id="contacts1UL">
+                <div id="contacts1Head">Adesung Professional Services</div>
+                <li><a href="#"><img src="res/icon/location1.jpg" alt="+2348064205333" class="ui-li-icon">7, Bosude Close, Off Ishola Bello St, <br><span id="contacts1ULSpan">Akiode, Ojodu-Berger, Ikeja, Lagos</span></a></li>
+                <li><a href="mailto:adesung2005@yahoo.co.uk"><img src="res/icon/mail1.png" alt="mailto:adesung2005@yahoo.co.uk" class="ui-li-icon">adesung2005@yahoo.co.uk</a></li>
+                <li><a href="tel:+2348064205333"><img src="res/icon/phone1.jpg" alt="+2348064205333" class="ui-li-icon">+2348064205333</a></li>
+              </ul>
+            </div>
+            <br>
+            <hr>
+              <div id="contacts">
+                <a href="tel:+2348064205333">
+                    <img alt="Twitter" src="res/icon/phone.png"/>
+                </a>
+                <a href="mailto:adesung2005@yahoo.co.uk">
+                    <img alt="Mail" src="res/icon/email.png"/>
+                </a>
+                <a href="https://www.linkedin.com/in/sunday-adegboye-aca-046644a62">
+                    <img alt="Linkedin" src="res/icon/linkedin.png"/>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=2348064205333">
+                    <img alt="WhatsApp" src="res/icon/whatsapp.png"/>
+                </a>
+                <a href="https://www.twitter.com/adesung2005">
+                    <img alt="Twitter" src="res/icon/twitter.png"/>
+                </a>
+                <a href="https://www.facebook.com/Sunny.adesung">
+                    <img alt="Facebook" src="res/icon/facebook.png"/>
+                </a>
+            </div>
+        
+    </div> 
+
+</div><!-- /content -->
+	
+<div data-role="footer" data-position="fixed" id="homeFooterBar">
+	<h4></h4>
+</div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+
+<!-- Start of second page. Page2-  -->
+<div data-role="page" id="page2">
+
+<div data-role="header" data-position="fixed" id="homeHeaderBar">
+	<div data-role="navbar">
+	   	<ul>
+	     <li><a  id="myHome" href="#home" data-icon="home">Home</a></li>
+	     <li><a href="#add" data-icon="plus" id="page2Btn">PIT Cal</a></li>
+	      <li><a href="#page3" data-icon="plus" id="page3Btn">Page3</a></li>
+	   	</ul>    
+ 	</div>
+</div><!-- /header -->
+
+
+
+<div role="main" class="ui-content" id="homeBody">
+	<!-- Calculator Section Starts-->
+    <form name="form">
+    <button class="textview" id="textview">
+     <div>Tax payable: <span class="taxResult1">00</span></div>
+     <div>Pension: <span class="taxResult1">00</span></div>
+     <div>Net Income: <span class="taxResult1">00</span></div>
+    </button>
+    </form>
+    <p id="simpleCal">Simple Calculator</p>
+ 
+  <div>
+  	<h3>Enter your allowances</h3>
+    <table class = "pitaTable">
+    <tr>
+    <td><input type="submit" value="1" class="cBtns1"></td>
+    <td><input type="submit" value="2" class="cBtns1" ></td>
+    <td><input type="submit" value="3" class="cBtns1"></td>
+    <td><input type="submit" value="4" class="cBtns1" ></td>
+    <td><input type="submit" value="5"   class="cBtns1" ></td>
+    <td><input type="submit" value="6" class="cBtns1" ></td>
+    </tr>
+    
+    <tr>
+    <td colspan="2"><input type="submit" class="taxdata1" value="Basic "></th>
+    <td colspan="2"><input type="submit" class="taxdata1" value="House"></th>
+    <td colspan="2"><input type="submit" class="taxdata1" value="Transport">
+    </tr>
+    <tr>
+    <td colspan="2"><input class="taxdata1" placeholder="Basic allowance"></td>
+    <td colspan="2"><input class="taxdata1" placeholder="House allowance"></td>
+    <td colspan="2"><input class="taxdata1" placeholder="Transport allowance"></td>
+    </tr>
+    <tr>
+    <td colspan="3"><input class="taxdata1" placeholder="Other Taxable allowances"></td>
+    <td colspan="3"><input class="taxdata1" placeholder="Non-Taxable allowances (if any)"></td>
+    </tr>
+    </table>
+  </div>
+
+     <!----/Calculator Section Ends-->
+<hr>
+   <button id="clearRuns">Personal Income Tax Calculator</button>
+<hr>
+</div><!-- /content -->
+ 
+<div data-role="footer" data-position="fixed" id="homeFooterBar">
+	<h4></h4>
+</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of third page. Page3-  -->
+<div data-role="page" id="page3">
+<div data-role="header" data-position="fixed" id="pg3HeaderBar">
+  <h4 id="page3HeaderTitle">PIT Calculator</h4>
+  <a href="#home" class="ui-btn ui-icon-home ui-btn-icon-notext" id="page3HeaderIconL" data-direction="reverse">bars</a>
+  
+	<!--<div data-role="navbar">
+	   	<ul>
+	     <li><a href="#home" data-icon="home" id="page3ToHomeBtn">Home</a></li>
+	     <li><a href="#page2" data-icon="plus" id="page3To2Btn">PIT Cal</a></li>
+	     <li><a href="#page3" data-icon="plus" id="page3Btn">Page 3</a></li>
+       <li><a href="#page4" data-icon="plus" id="page3To4Btn">Page 4</a></li>
+	   	</ul>    
+ 	</div>-->
+</div><!-- /header -->
+
+
+
+<div role="main" class="ui-content" id="homeBody">
+	<!-- Calculator Section Starts
+  <div id="simpleCal">Simple Calculator</div>
+  <hr>
+  -->
+  <button class="textview" id="textview">
+  <div class="grid1-container">
+    <div class="grid1-item1 label1" id="grid1-Income-Head">Income:</div>
+    <div class="grid1-item2 label2" ><span>Gross</span><div class="taxResult" id="taxResultGross" type="submit">00.00</div></div>
+    <div class="grid1-item3 label2"><span>Taxable</span><div class="taxResult" id="taxResultTaxable" type="submit">00.00</div></div>
+    <div class="grid1-item4 label2"><span>Net</span><div class="taxResult" id="taxResultNet" type="submit">00.00</div></div>
+
+    <div class="grid1-item5 label1" id="grid1-Deduction-Head">Deductions:</div>
+    <div class="grid1-item6 label3" ><span>Pension</span><div class="taxResult" id="taxResutPen" type="submit" >00.00</div></div>
+    <div class="grid1-item7 label3" ><span>NHF</span><div class="taxResult" id="taxResultNHF" type="submit" >00.00</div></div>
+    <div class="grid1-item8 label3"><span id="taxResultTaxDueSpan">Tax Payble</span><div class="taxResult" id="taxResultTaxDue" type="submit">00.00</div></div>
+
+    <div class="grid1-item9 label1" id="grid1-effectiveTax">Effective Tax Rate :<span id="grid1-effectiveTR" class="taxResult">0</span></div>
+  </div>
+  </button>
+
+  <!-- Custom Radio Buttons----->
+  <div id="periodSelHead">Select Display Result</div>
+  <div id="rBoxContainer">
+    <label class="Rcontainer">Annual
+      <input type="radio" checked="checked" name="radio" id="aCheckmark">
+      <span class="checkmark"></span>
+    </label>
+    <label class="Rcontainer">Monthly
+      <input type="radio" name="radio" id="mCheckmark">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+  <a href="#page4" class="ui-btn ui-icon-eye ui-btn-icon-left" id="pg4ShowDetails">View Annual PIT Details</a>
+  <hr>
+  <!--- /Monthly/ Annual Result Selection ---->
+     <!-- Custom Radio Buttons 2----->
+  <div id="periodSelHeadF">Annual or Monthly allowances?</div>
+  <div id="rFBoxContainer">
+    <label class="Rcontainer">Annual
+      <input type="radio" checked="checked" name="radio2" id="aFCheckmark">
+      <span class="checkmark2"></span>
+    </label>
+    <label class="Rcontainer">Monthly
+      <input type="radio" name="radio2" id="mFCheckmark">
+      <span class="checkmark2"></span>
+    </label>
+  </div>
+
+<div class="grid2-container">
+    <div class="grid2-item1 label1">Enter your taxable allowances:</div>
+  	<div class="grid2-item2 label2" ><span>Basic</span><input class="taxdata" id="taxDataBasic" placeholder="Basic allowances" type="number"></div>
+    <div class="grid2-item3 label2"><span>House</span><input class="taxdata" id="taxDataHouse"placeholder="House allowances" type="number" ></div>
+    <div class="grid2-item4 label2"><span>Transport</span><input class="taxdata" id="taxDataTran" placeholder="House allowances" type="number"></div>
+
+    <div class="grid2-item5 label3" ><span>Others</span><input class="taxdata" id="taxDataOthers" placeholder="Other taxable allowances" type="number"></div>
+    <div class="grid2-item6 label3"><span>Non-taxable allowance</span><input class="taxdata" id="taxDataNonTax"placeholder="Non-taxable allowances" type="number" ></div>
+</div>
+  <!---- Custom Checkboxes ---->
+<div id="cBoxContainer">
+  <label class="cBoxes">Pension
+    <input type="checkbox" checked="checked" id="cbox1">
+  </label>
+  <label class="cBoxes">NHF
+    <input type="checkbox" id="cbox2">
+  </label>
+</div>
+  
+</div><!----/Main Section Ends-->     
+
+<div data-role="footer" data-position="fixed" id="pg3FooterBar">
+    <button id="computeTax">Compute</button>
+    <button id="resetFigs">Reset</button>
+    <button  id="recallFigs">Recall</button>
+</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<!-- Start of Forth page. Page4- PAYE Details -->
+<div data-role="page" id="page4">
+
+<div data-role="header" data-position="fixed" id="homeHeaderBar">
+  <!--<a href="#page3" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext" id="page3HeaderIconL" data-direction="reverse">back</a>-->
+  <h4 id="page4Title">PAYE Detail Calculation</h4>
+  <div data-role="navbar">
+      <ul>
+       <li><a href="#home" data-icon="home" id="page4ToHomeBtn" data-direction="reverse">Home</a></li>
+       <li><a href="#page3" data-icon="calendar" id="page4ToHomeBtn" data-direction="reverse">PIT Calculator</a></li>
+      </ul>    
+  </div>
+</div><!-- /header -->
+
+<div role="main" class="ui-content" id="pg4homeBody">
+  <!-- Calculator Section Starts-->
+  <br><br>
+  <hr>
+  <p id="simpleCal">Annual PIT Details</p>
+  <hr>
+  <button class="textview" id="pg4textview">
+  <div class="grid3-container">
+    <div class="grid3-item2 label2" ><span>Gross Income</span><div class="taxDetails" id="tDGross" type="submit">00.00</div></div>
+    <div class="grid3-item3 label2"><span>Non-taxable Income</span><div class="taxDetails" id="tDTaxable" type="submit">00.00</div></div>
+    <div class="grid3-item4 label2"><span>Deductions allowed</span><div class="taxDetails" id="tDNonTaxable" type="submit">00.00</div></div>
+    <div class="grid3-item5 label2" ><span>Consolidated Relief</span><div class="taxDetails" id="tDConsol" type="submit">00.00</div></div>
+    <div class="grid3-item6 label2"><span>Total Deductions & Relief</span><div class="taxDetails" id="tDNext600" type="submit">00.00</div></div>
+    <div class="grid3-item7 label2" id="grid3-item7"><span>Taxable Income</span><div class="taxDetails" id="tDMinTax" type="submit">00.00</div></div>
+
+     <div class="grid3-item8 label2"><span>Tax payable</span><div class="taxDetails" id="tDNext600" type="submit">00.00</div></div>
+    <div class="grid3-item9 label2" id="grid3-item9"><span>Minimum Tax</span><div class="taxDetails" id="tDMinTax" type="submit">00.00</div></div>
+
+    <div class="grid3-item10 label1" id="grid3-Breakdown-Head">Breakdown of Tax Payable:</div>
+    <div class="grid3-item11 label2" ><span>First $300,000</span><div class="taxDetails" id="tD300" type="submit">00.00</div></div>
+    <div class="grid3-item12 label2"><span>Next $300,000</span><div class="taxDetails" id="tD600" type="submit">00.00</div></div>
+    <div class="grid3-item13 label2"><span>Next $500,000</span><div class="taxDetails" id="tD1100" type="submit">00.00</div></div>
+
+    <div class="grid3-item14 label2" ><span>Next $500,000</span><div class="taxDetails" id="tD1600" type="submit" >00.00</div></div>
+    <div class="grid3-item15 label2" ><span>Next $1,600,000</span><div class="taxDetails" id="tD3200" type="submit" >00.00</div></div>
+    <div class="grid3-item16 label2"><span id="taxResultTaxDueSpan">Above $3,200,000</span><div class="taxDetails" id="tDOver3200" type="submit">00.00</div></div>
+  </div>
+  </button>
+  <br>
+  <hr>
+  <div class="pitDetails">
+  <p>Personal Income Tax (PIT) is a tax levied on individuals including employees, partners in a partnership, unincorporated trust, joint ventures, families and communities. It is imposed based on source and residency rules. </p>
+  <p>PIT rate is applied on a graduated scale and taxable income bands</p>
+  <a href="#page9" class="ui-btn ui-icon-eye ui-btn-icon-left" id="pg4ShowDetails">Summary of PIT Reliefs & Rates </a>
+  </div>
+
+  <!--<div>
+    <p>Tax Table</p>
+    <div class="taxTableCont1 taxTableCont4">First $300,000<span>7%</span></div>
+    <div class="taxTableCont1">Next $300,000<span>11%</span></div>
+    <div class="taxTableCont1">Next $500,000<span>15%</span></div>
+    <div class="taxTableCont1">Next $500,000<span>19%</span></div>
+    <div class="taxTableCont1 taxTableCont2">Next $1,600,000<span>21%</span></div>
+    <div class="taxTableCont1 taxTableCont3">Above $3,200,000<span>24%</span></div>
+  </div>-->
+
+ 
+
+</div><!----/Main Section Ends--> 
+
+<div data-role="footer" data-position="fixed" id="pg4homeFooterBar">
+  <h4></h4>
+</div><!-- /footer -->
+</div><!-- /page4 -->
+
+
+<!-- Start of Fifth page. Page5- Finance Act 2019-1 -->
+<div data-role="page" id="page5">
+
+<div data-role="header" data-position="fixed" id="homeHeaderBar">
+  <h4 id="pg7HeaderBarTitle">FINANCE ACT 2019 CONTD</h4>
+  <div data-role="navbar">
+      <ul>
+       <li><a data-rel="back" href="#page7" data-icon="arrow-l" id="page4To2Btn">Back</a></li>
+       <li><a href="#home" data-icon="home" id="page4ToHomeBtn" data-direction="reverse" >Home</a></li>
+       <li><a href="#page6" data-icon="arrow-r" id="page4To2Btn">Next</a></li>
+      </ul>    
+  </div>
+</div><!-- /header -->
+
+<div role="main" class="ui-content" id="pg4homeBody">
+  <!-- Calculator Section Starts-->
+  <br>
+  <div class="finActSections">
+  <p class="finActSectionsP1" id="pg5Sections">Sections</p>
+  <p>1. Company Income Tax (CIT)</p>
+  </div>
+  <hr>
+  <br>
+
+  <div class="grid1-container-pg5">
+    <div class="grid1-item1-pg5 grid1-items-pg5 label1" id="grid1-Income-Head">1. Company Income Tax -CIT:</div>
+    <div class="grid1-item2-pg5 label2 finActAmend">Amendment to Section 9 of the principal Act (S.2 of the Finance Act)</div>
+
+    <div class="grid1-item3-pg5 label2"><span>Charge of Tax</span><div>Interest and Dividend in subsection 1(c) of the principal Act are defined.
+      <ul class="grid1-ul-pg5">
+        <li> Interest shall include compensating payments received by a Borrower from its approved agent or a Lender in a Regulated Securities Lending Transaction provided that the underlying transaction giving rise to the compensating payment is a receipt of interest by a Lender on the collateral it received from its approved agent or a Borrower in a Regulated Securities Exchange Transaction.</li><br>
+        <li> dividend shall include compensating payments received by a Lender from its approved agent or Borrower in a Regulated Securities Lending Transaction if the underlying transaction giving rise to the compensating payment is a receipt of dividends by a Borrower on any shares or securities received from its approved agent or a Lender in a Regulated Securities Lending Transaction.</li>
+      </ul>
+    </div></div>
+
+    <div class="grid1-item4-pg5 label2 finActAmend">Substitution for Section 10 of the principal Act (S.3 of the Finance Act)</div>
+    <div class="grid1-item5-pg5 label2" ><span>Identification of a company</span><div ><ul class="grid1-ul-pg5">
+      <li>Taxpayer Identification number (TIN) to serve as the means of identifying companies instead of incorporation number provided for in the principal Act.</li><br>
+      <li>Banks shall require all companies to provide their TIN before opening accounts.</li><br>
+      <li>Accounts already opened without TIN are given a grace period of 3 months from passage of this Act to provide their TIN</li><br>
+    </div></div>
+
+    <div class="grid1-item6-pg5 label2 finActAmend">Amendment of Section 16 of the principal Act (S.5 of the Finance Act</div>
+    <div class="grid1-item7-pg5 label2"><span>Insurance companies</span><div>
+     <ul class="grid1-ul-pg5"> 
+      <li>Insurance companies can now carry forward their losses indefinitely like other companies.</li><br>
+      <li>Minimum tax for non-life is now 0.5% of gross premium. [S.16(12a)]</li><br>
+      <li>Minimum tax for life insurance is now 0.5% of gross income. [S.16(12b)]</li><br>
+      <li>reserve for unexpired risks is to be calculated on a time apportionment basis of the risks accepted in the year. [S.16(8a)]</li><br>
+      <li>Reserve for outstanding claims and outgoings shall be an amount equal to the total estimated amount of all outstanding claims and outgoings, provided that any amount not utilised towards settlement of claims and outgoings shall be added to the total profits of the following year. [S.16 (8b)].</li><br>
+    </div></div>
+
+    <div class="grid1-item8-pg5 label2 finActAmend">Amendment of Section 19 of the principal Act (S.7 of the Finance Act)</div>
+    <div class="grid1-item9-pg5 label2"><span>Payment of dividend by a Nigerian company</span><div>
+     <ul class="grid1-ul-pg5">
+     The Finance Act has introduced exemptions to the provision of excess dividend tax in a new sub-section 2 as follows:
+      <li>(a) Dividends paid out of the retained earnings of a company.</li><br>
+      <li>(b) Dividends paid out of profits that are exempted</li><br>
+      <li>(c) profits or income of a company that are regarded as franked investment income under this Act; and</li><br>
+      <li>(d) distributions made by a Real Estate Investment Company to its shareholders from rental income and dividend income received on behalf of those shareholders.</li><br>
+    </div></div>
+
+    <div class="grid1-item10-pg5 label2 finActAmend">Amendment of Section 29 of the principal Act (S.12 of the Finance Act)</div>
+    <div class="grid1-item11-pg5 label2"><span>Basis for computing assessable profit</span><div>
+     <ul class="grid1-ul-pg5">
+     The commencement and cessation rules are eliminated as assessments are generally on preceding year basis now.
+      <li>The 1st year under commencement shall be assessed from the date the company commenced to the end of its first accounting period (S.29(3a)</li><br>
+      <li>Second year shall be from the day after the 1st accounting period to the end of the second period etc.</li><br>
+      <li>For cessation of business, the assessable profit in the year of cessation shall be the profit from the beginning of the accounting period to the date of cessation and the tax shall be payable within 6 months of cessation. </li><br>
+    </div></div>
+    
+    <div class="grid1-item12-pg5 label2 finActAmend">Amendment of Section 29 of the principal Act (S.12 of the Finance Act)</div>
+    <div class="grid1-item13-pg5 label2"><span>Minimum Tax</span><div>
+     <ul class="grid1-ul-pg5">
+      the minimum tax to be levied and paid shall be 0.5% of gross turnover of the company, less franked investment income. (S.33(2a) <br> <br>
+      <div class="grid1-pg5-subHead1">Exemptions</div>
+      <li>(a) a company carrying on agricultural trade or business as defined in subsection (9) of section II, of this Act</li><br>
+      <li>(b) a company that earns gross turnover of less than twenty-five million naira in the relevant year of assessment</li><br>
+      <li>(c) any company for the first four calendar years of its commencement of business. </li><br>
+    </div></div>
+
+    <div class="grid1-item14-pg5 label2 finActAmend">Substitution for Section 40 of the principal Act (S.16 of the Finance Act)</div>
+    <div class="grid1-item15-pg5 label2"><span>Rate of Tax</span><div>
+     <ul class="grid1-ul-pg5">
+      <p>Section 40 of the CIT Act is repealed and replaced with a new Section 40 as follows:</p>
+      <p>There shall be levied and paid for each year of assessment in respect of total profits of every company, tax as follows. </p>
+      <li>In the case of </li><br>
+      <li>(a) small company, tax as provided under Section 23(1)(o) of this Act (i.e CIT at 0%).</li><br>
+      <li>(b) medium-sized company, tax at the rate of twenty kobo for every naira; and</li><br>
+      <li>(c) large company, tax at the rate of thirty kobo for every naira.</li><br>
+    </div></div>
+
+    <div class="grid1-item16-pg5 label2 finActAmend">Amendment of Section 77 of the principal Act (S.18 of the Finance Act)</div>
+    <div class="grid1-item17-pg5 label2"><span>Time within which tax (including provisional tax) is to be paid</span><div>
+     <ul class="grid1-ul-pg5">
+      <p>There is no more payment of provisional tax as S.77(1) has been repealed.</p>
+      <p>Every Company shall make payment of tax due on or before the due date of filing, in one lump sum or in instalments; Provided that, where the taxpayer pays in instalments:</p>
+      <li>a. The taxpayer shall first write, with evidence of payment of the first instalment, and obtain the approval of the Service to pay in such number of instalments as may be approved by the Service.</li><br>
+      <li>b. The final instalment must be paid on or before the due date of filing.</li><br>
+      <p>Bonus</p>
+      <li>Where a company pays its tax 90 days before the due date as provided under Section 55 of this Act, such company shall be entitled to a bonus of – </li><br>
+      <li>(a) 2%, if such company is a medium-sized company; and </li><br>
+      <li>(b)1% for any other company;  on the amount of tax paid, which shall be available as a credit against its future  taxes.</li><br>
+    </div></div>
+
+    <div class="grid1-item18-pg5 label2 finActAmend">Amendment of Section 105 of the principal Act (S.22 of the Finance Act)</div>
+    <div class="grid1-item19-pg5 label2"><span>Interpretation</span><div>
+     <ul class="grid1-ul-pg5">
+      <p>Section 105(1) of the CIT Act is amended as follows:</p>
+      <li>a. Deleting the definition of "Board" and defining the term "Service" as follows: Service" means the Federal Inland Revenue Service as defined in the Federal Inland Revenue Service (Establishment) Act, 2007;</li><br>
+      <li>b. Replacing all references to "the Board" in the CIT Act with "the Service".</li><br>
+      <li>c. Providing a definition for the following terms:</li><br>
+      <li>"Large company" means any company which is not a small or medium-sized company.</li><br>
+       <li>"Medium-sized company" means a company that earns gross turnover greater than N25,000,000 but less than N100,000,000;</li><br>
+        <li>"Small company" means a company that earns gross turnover of N25,000,000 or less;</li><br>
+    </div></div>
+
+    <div class="grid1-item20-pg5 label2 finActAmend">Amendment of the schedules (S.23 of the Finance Act)</div>
+    <div class="grid1-item21-pg5 label2"><div>
+     <ul class="grid1-ul-pg5">
+      <div>The Finance Act introduced a new schedule 7 after the sixth schedule as follows:</div>
+      <li>Where a Nigerian company, or a fixed base of a foreign company in Nigeria, incurs any expenditure by way of interest or of similar nature in respect of debt issued by a foreign connected person, the excess interest thereon shall be a disallowable deduction for the purpose of this Act:</li><br>
+      <li>For the purposes of sub-section (1), the excess interest shall mean an amount of total interest paid or payable in excess of thirty per cent (30%) of earnings before interest, taxes, depreciation and amortization of the Nigerian company in that accounting period.</li><br>
+      <li>Where for any assessment year, the interest expenditure is not wholly deducted against income, so much of the interest expenditure as has not been deducted, shall be carried forward to the following assessment year or assessment years, provided that no interest expenditure shall be carried forward under this sub-section for more than five (5) assessment years immediately succeeding the assessment year for which the excess interest expenditure was first computed.</li><br>
+    </div></div>
+
+  </div><!----/grid1-container-pg5-->
+  <a href="#page6" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg5LastBtn">Next</a>
+</div><!----/Main Section Ends--> 
+
+<div data-role="footer" id="pg7homeFooterBar"><!-- footer -->
+  <div class="scrollBtns">
+    <a href="#pg5Sections" data-ajax="false" data-transition="slideup" class="ui-icon-carat-u ui-btn-icon-left ui-corner-all scrollBtn" id="scrollBtnU"></a>
+    <a href="#pg5LastBtn" data-ajax="false" data-rel data-transition="slidedown" class="ui-icon-carat-d ui-btn-icon-right ui-corner-all scrollBtn" id="scrollBtnD"></a>
+  </div>
+</div><!-- /footer -->
+</div><!-- /page5 -->
+
+
+
+<!-- Start of Sixth page. Page6- Finance Act 2019-2 -->
+<div data-role="page" id="page6">
+
+<div data-role="header" data-position="fixed" id="homeHeaderBar">
+  <h4 id="pg7HeaderBarTitle">FINANCE ACT 2019 CONTD</h4>
+  <div data-role="navbar">
+      <ul>
+        <li><a data-rel="back" href="#page5" data-icon="arrow-l" id="page4To2Btn" data-direction="reverse">Back</a></li>
+        <li><a href="#home" data-icon="home" id="page4ToHomeBtn" data-direction="reverse" >Home</a></li>
+      </ul>    
+  </div>
+</div><!-- /header -->
+
+<div role="main" class="ui-content" id="pg4homeBody">
+  <!-- Calculator Section Starts-->
+  <br>
+  <div class="finActSections" id="pg6Sections">
+  <p class="finActSectionsP1">Sections</p>
+  <p>2. Petroleum Profits Tax (PPT)</p>
+  <p>3. Personal Income Tax (PIT)</p>
+  <p>4. Value Added Tax (VAT)</p>
+  <p>5. Customs and Excise Tarrif</p>
+  <p>6. Capital Gains Tax (CGT)</p>
+  <p>7. Stamp Duties</p>
+
+  </div>
+  <hr>
+  <br>
+  <div class="grid1-container-pg6">
+    <div class="grid1-item1-pg6 label1" id="grid1-Income-Head">2. Petroleum Profits Tax -PPT:</div>
+    <div class="grid1-item2-pg6 label2 finActAmend">Deletion of Section 60 of the principal Act (S. 24 of the Finance Act)</div>
+
+    <div class="grid1-item3-pg6 label2"><span>Restrictions on effect of the Personal Income Tax Act and other Acts</span><div>
+      <ul class="grid1-ul-pg6">
+        <li> Section 60 of the Petroleum Profits Tax Act is repealed.</li><br>
+        <li> This implies that WHT is now applicable on the dividend paid out under PPTA.</li>
+      </ul>
+    </div></div>
+
+    <div class="grid1-item4-pg6 label1">3. Personal Income Tax</div>
+    <div class="grid1-item5-pg6 label2 finActAmend">Amendment of Section 49 of the principal Act (S. 28 of the Finance Act</div>
+    <div class="grid1-item6-pg6 label2" ><span>Information to be delivered by bankers</span><div >
+      <ul class="grid1-ul-pg6">
+      <li>A new subsection 1 has been introduced which provides that a person intending to open a bank account for the purpose of business operations shall provide Taxpayer Identification Number (TIN) as a precondition for opening or continue operating of such account.</li><br>
+      </ul>
+    </div></div>
+
+    <div class="grid1-item7-pg6 label2 finActAmend">Amendment of Section 58 of the principal Act (S. 29 of the Finance Act)</div>
+    <div class="grid1-item8-pg6 label2"><span>Revision in case of objection</span><div>
+     <ul class="grid1-ul-pg6"> 
+      <li>Section 58 of the PIT Act is amended by introducing the means of objection in writing to include delivery in person, by courier service or via electronic mail.</li><br>
+      </ul>
+    </div></div>
+
+    <div class="grid1-item9-pg6 label1">4. Value Added Tax</div>
+    <div class="grid1-item10-pg6 label2 finActAmend">Amendment of Section 4 of the principal Act (S. 34 of the Finance Act)</div>
+    <div class="grid1-item11-pg6 label2" ><span>Rate of tax</span><div>
+      <ul class="grid1-ul-pg6">
+        <li>Section 4 is amended by substituting 5 per cent with 7.5 per cent.</li><br>
+        <li>The Honourable Minister of Finance, Budget and National planning had stated that the implementation date for the new VAT rate is 1st February, 2020.</li><br>
+      </ul>
+    </div></div>
+    <div class="grid1-item12-pg6 label2 finActAmend">Substitution for Section 8 of the principal Act (S. 35 of the Finance Act)</div>
+    <div class="grid1-item13-pg6 label2"><span>Registration</span><div>
+     <ul class="grid1-ul-pg6"> 
+      <li>S.8 (1) A taxable person shall upon commencement of business register with the Service for the purpose of the tax.</li><br>
+      <li>(2) A taxable person who fails or refuses to register with the Service within the time specified in subsection (1) of this section shall be liable to pay as penalty an amount of - </li><br>
+      <li>(a) N50,000 for the first month in which the failure occurs; and </li><br>
+      <li>(b) N25,000 for each subsequent month in which the failure continues.</li><br>
+    </div></div>
+
+    <div class="grid1-item14-pg6 label2 finActAmend">Amendment of Section 14 of the principal Act (S. 37 of the Finance Act)</div>
+    <div class="grid1-item15-pg6 label2"><span>Collection of tax by taxable person</span><div>
+     <ul class="grid1-ul-pg6"> 
+      <li>Section 14 of the VAT Act is amended by inserting subsection (3) as follows:</li><br>
+      <li>Where a person to whom taxable supplies is made in Nigeria is issued an invoice on which no tax is charged, <em>such a person shall self-account for the tax payable and remit the tax to the Service within the timeline prescribed under Section 15 of this Act.</em> </li><br>
+    </div></div>
+
+    <div class="grid1-item16-pg6 label2 finActAmend">Amendment of Section 15 of the principal Act (S. 38 of the Finance Act)</div>
+    <div class="grid1-item17-pg6 label2"><span>Taxable person to render returns</span><div>
+     <ul class="grid1-ul-pg6"> 
+      <li>The provisions of S.15 (1) shall now be applicable to only a taxable person who in the course of a business has made taxable supplies or expects to make taxable supplies, the value of which, either singularly or cumulatively in any calendar year, is twenty-five million Naira (25,000,000) or more.</li><br>
+      <li>The return is to be filed with the Service on or before the 21st day of every month in which the threshold is achieved and on or before the same day in successive months thereafter.</li><br>
+      </div></div>
+
+    <div class="grid1-item18-pg6 label2 finActAmend">Amendment of Section 16 of the principal Act (S. 39 of the Finance Act)</div>
+    <div class="grid1-item19-pg6 label2"><span>Remission of tax</span><div>
+     <ul class="grid1-ul-pg6"> 
+      <li>A taxable person shall, on rendering a return under subsection (1) of section 15 of this Act - </li><br>
+      <li>a) If the output tax collected exceeds the input tax paid, remit the excess to the Board; </li><br>
+      <li>b) if the input tax paid exceeds the output tax collected, be entitled to utilize the excess tax as a credit against subsequent months.</li><br>
+      <p>Provided that the taxable person would be entitled to a refund from the Service, of excess tax not utilised as a credit, upon provision of such documents as the Service may require.</p><br>
+      </div></div>
+
+    <div class="grid1-item20-pg6 label2 finActAmend">Substitution for Section 35 of the principal Act (S. 44 of the Finance Act)</div>
+    <div class="grid1-item21-pg6 label2"><span>Failure to submit returns</span><div>
+     <ul class="grid1-ul-pg6"> 
+      <li>A taxable person who fails to submit returns to the Service, is liable to a fine of N50,000 in the month of default and N25,000 for every month in which the default continues.</li><br>
+     </ul>
+      </div></div>
+
+    <div class="grid1-item22-pg6 label2 finActAmend">Amendment of Section 36 of the principal Act (S. 51 of the Finance Act)</div>
+    <div class="grid1-item23-pg6 label2"><span>Personal Injury</span><div>
+     <ul class="grid1-ul-pg6"> 
+      <p>Sums obtained by way of compensation for loss of office shall not be chargeable gains except where the amount exceeds N10,000,000.</p><br>
+    </div></div>
+    
+
+    <div class="grid1-item24-pg6 label1">5. Customs and Excise Tariff etc (Consolidation) Act [CET Act]</div>
+    <div class="grid1-item25-pg6 label2 finActAmend">Amendment of Part III, Section 21 of the CET Act</div>
+    <div class="grid1-item26-pg6 label2" ><span>Expansion of goods liable to excise duties to include imported goods</span><div>
+      <ul class="grid1-ul-pg6">
+        <p>This eliminates any unfair advantage on imported products over local products. </p>
+        <p>It ensures a level playing field between local producers and imported products.</p><br>
+      </ul>
+    </div></div>
+
+    <div class="grid1-item27-pg6 label1">6. Capital Gains Tax</div>
+    <div class="grid1-item28-pg6 label2 finActAmend">Amendment of Section 36 of the principal Act (S. 51 of the Finance Act)</div>
+    <div class="grid1-item29-pg6 label2" ><span>Personal Injury</span><div>
+      <ul class="grid1-ul-pg6">
+        <p>Sums obtained by way of compensation for loss of office shall not be chargeable gains except where the amount exceeds N10,000,000.</p><br>
+        <br>
+      </ul>
+    </div></div>
+
+    <div class="grid1-item30-pg6 label1">7. Stamp Duties Tax</div>
+    <div class="grid1-item31-pg6 label2 finActAmend">Substitution for Section 89 of the principal Act (S. 54 of the Finance Act)</div>
+    <div class="grid1-item32-pg6 label2" ><span>Provision as to duty upon receipt</span><div>
+      <ul class="grid1-ul-pg6">
+        <p>Electronic receipt or electronic transfer of amounts from N10,000 upwards shall attract a singular and one-off duty of N50.</p><br>
+        <br>
+      </ul>
+     </div></div>
+  </div><!----/grid1-container-pg6-->
+
+  <a href="#page5" class="ui-btn ui-icon-arrow-l ui-btn-icon-left ui-corner-all" id="pg6LastBtn">Previous</a>
+</div><!----/Main Section Ends--> 
+
+<div data-role="footer" id="pg7homeFooterBar"><!-- footer -->
+  <div class="scrollBtns">
+    <a href="#pg6Sections" data-ajax="false" data-transition="slideup" class="ui-icon-carat-u ui-btn-icon-left ui-corner-all scrollBtn" id="scrollBtnU"></a>
+    <a href="#pg6LastBtn" data-ajax="false" data-rel data-transition="slidedown" class="ui-icon-carat-d ui-btn-icon-right ui-corner-all scrollBtn" id="scrollBtnD"></a>
+  </div>
+</div><!-- /footer -->
+</div><!-- /page6 -->
+
+<!-- Start of Seventh page. Page7- Finance Act:2019 -->
+<div data-role="page" id="page7">
+
+<div data-role="header" data-position="fixed" id="pg7HeaderBar">
+  <a href="#home"class="ui-btn ui-icon-home ui-btn-icon-notext" id="pg7HeaderIconL">home</a>
+  <h4 id="pg7HeaderBarTitle">FINANCE ACT 2019</h4>
+  <a href="" data-rel="back" class="ui-btn ui-icon-back ui-btn-icon-notext" id="pg7HeaderIconL">back</a>
+</div><!-- /header -->
+
+<div role="main" class="ui-content" id="pg7homeBody">
+  
+  <h2 class="pg7Settings0" id="pg7Sections">FINANCE ACT 2019</h2>
+  <hr>
+  <div class="pg7Settings1">
+    <p>On 13th January, 2020, President Muhammadu Buhari signed the Finance Bill into law to be known as the Finance Act 2019.</p>
+    <div >The objectives of the Finance Act include:</div>
+    <ul>
+        <li>Promoting fiscal equity by mitigating instances of regressive taxation </li>
+        <li>Reforming domestic tax laws to align with global best practices</li>
+        <li>Introducing tax incentives for investment in infrastructure and capital markets</li>
+        <li>Supporting micro, small and medium sized businesses in line with the administration’s ease of doing business reforms.</li>
+        <li>Raising revenue for Federal, State and Local Governments.</li>
+    </ul>
+  </div>
+
+  <div class="pg7Settings2">
+    <P>The Act seeks to reform 7 tax laws to promote fiscal balance, provide incentives to business and raise government revenues. Expedited consideration and hearing by the National Assembly.</P>
+    <div>
+      <p>Shift from direct tax to indirect tax</p>
+      <div>a. Raise Revenue</div>
+      <ul>
+        <li>VAT rate increase to 7.5% </li>
+        <li>Harness digital economy</li>
+        <li>Excise Duty on imports </li>
+        <li>Withholding tax on petroleum profit</li>
+      </ul>
+      <div>b. Mitigate regressive rules </div>
+      <ul>
+        <li>Excess dividends tax revised</li>
+        <li>Tax on interim dividends removed</li>
+        <li>Minimum tax rule changed </li>
+        <li>Tax rules for new and exiting business revised</li>
+      </ul>
+    </div>
+    <div>
+      <p>Potential increase  in corporate income</p>
+      <div>a. Incentivize business</div>
+      <ul>
+        <li>MSMEs’ preferential income tax rates </li>
+        <li>Registration threshold and VAT exemption for MSMEs</li>
+        <li>Early CIT payment incentive</li>
+        <li>CGT exemption for loss of employment compensation</li>
+      </ul>
+      <div>b. Reform the law </div>
+      <ul>
+        <li>Thin capitalization rule introduced </li>
+        <li>Creates framework for security lending transaction</li>
+        <li>Pass-through status for REICs </li>
+        <li>Anti-avoidance provision against artificial business restructuring </li>
+      </ul>
+    </div>
+  </div>
+  <br>
+  <div class="pg7Settings2">
+    <p>Arrangement of Sections</p>
+    <div>The Finance Act consists of 57 sections analysed as follows:
+      <a href="#page5" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID1">1. Companies Income Tax Act - 22 sections</a>
+      <a href="#page6" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID2">2. Petroleum Profits Tax Act -1 section</a>
+      <a href="#page6" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID3">3. Personal Income Tax Act  - 8 sections</a>
+      <a href="#page6" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID4">4. Value Added Tax Act - 15 sections</a>
+      <a href="#page6" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID5">5. Customs and Excise Tariff Act -1 section</a>
+      <a href="#page6" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID6">6. Capital Gains Tax Act  - 3 sections</a>
+      <a href="#page6" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID7">7. Stamp Duties Act  - 5 sections</a>
+      <a href="#page6" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID8">8. Sections 1 and 57 are introduction and citation respectively.</a>
+    </div>
+  </div>
+  <hr>
+  <div class="pg7Settings2 sub-1" id="pg7LastSec">
+    <P>Commencement date</P>
+      <ul>
+        <li>The commencement date of the Finance Act 2019 is 13th January, 2020.</li>
+        <li>However, the Honorable Minister of Finance, Budget and National Planning had announced that the new VAT rate of 7.5% takes effect on 1st February, 2020.</li>
+        <li>Therefore, while the commencement date remains 13th January, 2020, the implementation date for the new VAT rate is 1st February, 2020.</li>
+      </ul>
+  </div>
+</div><!----/Main Section Ends--> 
+
+<div data-role="footer" id="pg7homeFooterBar"><!-- footer -->
+  <div class="scrollBtns">
+    <a href="#pg7Sections" data-ajax="false" data-transition="slideup" class="ui-icon-carat-u ui-btn-icon-left ui-corner-all scrollBtn" id="scrollBtnU"></a>
+    <a href="#pg7LastSec" data-ajax="false" data-rel data-transition="slidedown" class="ui-icon-carat-d ui-btn-icon-right ui-corner-all scrollBtn" id="scrollBtnD"></a>
+  </div>
+</div><!-- /footer -->
+</div><!-- /page7 -->
+
+<!-- Start of Eighth page. Page8- Tax Rates & Schedules -->
+<div data-role="page" id="page8">
+
+  <div data-role="header" data-position="fixed" id="pg8HeaderBar">
+    <a href="#home"class="ui-btn ui-icon-home ui-btn-icon-notext" id="pg7HeaderIconL">home</a>
+    <h4 id="pg8HeaderBarTitle">Tax Rates & Schedules</h4>
+    <a href="" data-rel="back" class="ui-btn ui-icon-back ui-btn-icon-notext" id="pg7HeaderIconL">back</a>
+  </div><!-- /header -->
+
+  <div role="main" class="ui-content" id="pg8homeBody">
+
+    <div class="nig-Tax-System">
+      <p class="nig-Tax-System-P" id="pg8Sections">Summary of The Nigerian Tax System</p>
+      <hr>
+        <div class="nig-Tax-System-Div">Below is a summary of some of the tax laws in Nigeria.
+          <br></div>
+        <a href="#taxSchCIT" data-ajax="false" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID1">1. Companies Income Tax Act</a>
+        <a href="#taxSchPPT" data-ajax="false" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID2">2. Petroleum Profits Tax Act</a>
+        <a href="#taxSchTET" data-ajax="false" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID3">3. Tertiary Education Tax</a>
+        <a href="#taxSchIT" data-ajax="false" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID4">4. Information Technology Tax</a>
+        <a href="#taxSchWHT" data-ajax="false" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID5">5. Withholding Tax</a>
+        <a href="#taxSchCGT" data-ajax="false" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID6">6. Capital Gains Tax</a>
+        <a href="#page9" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID7">7. Value Added Tax</a>
+        <a href="#page9" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID8">8. Personal Income Tax</a>
+        <a href="#page9" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID8">9. Pension Contribution</a>
+        <a href="#page9" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID8">10. Industrial Training Fund Contribution</a>
+        <a href="#page9" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID8">11. Employee Compensation Scheme</a>
+        <a href="#page9" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID8">12. National Housing Fund</a>
+        <a href="#page9" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID8">13. Stamp Duties</a>
+        <a href="#page9" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID8">14. Custom and Excise Duties</a>
+    </div>
+    <div class="grid1-container-pg8"><!-- ---grid1-container-pg8 ---->
+      <div class="grid1-item item1 lLabelPry taxSumANDSch" id="taxSchCIT">1. COMPANY INCOME TAX (CIT)</div>
+      <div class="grid1-item item2 mLableTop">Relevant Law</div>
+      <div class="grid1-item item3 rLabelTop rLabelEnd">Companies Income Tax Act (CITA)</div>
+      <div class="grid1-item item4 ">Company liable [S 9 (10), S 30]</div>
+      <div class="grid1-item item5 rLabelEnd">Any company doing business in Nigeria, whether resident (registered in Nigeria) or non-resident (foreign company registered outside Nigeria).</div>
+      <div class="grid1-item item6">CIT Rate [S 40(1)]</div>
+      <div class="grid1-item item7 rLabelEnd">Standard rate 30%</div>
+      <div class="grid1-item item8">Small company tax rate [S 40(6)]</div>
+      <div class="grid1-item item9 rLabelEnd"><a href="#page7"> See the new Ammeded Finance Act 2019</a></div>
+      <div class="grid1-item item10">Minimum tax [S 33(1),(2)]</div>
+      <div class="grid1-item item11 rLabelEnd">1% of Gross profit</div>
+      <div class="grid1-item item12">Exception from Minimum tax [S 33(3)]</div>
+      <div class="grid1-item item13 rLabelEnd">
+        <p>The new minimum tax rule is applicable to all companies, except those specifically exempt by the Act, namely:</p>
+        <ul>
+          <li>1. Companies with less than N25million gross turnover.</li><br>
+          <li>2. Companies carrying on agricultural trade or business as defined in section 11(4) of CITA.</li>
+          <li>3. Any company in its first four calendar years of business operations.</li>
+        </ul>
+      </div>
+
+      <div class="grid1-item item14 lLabelPry taxSumANDSch" id="taxSchPPT">2. PETROLEUM PROFITS TAX (PPT)</div>
+      <div class="grid1-item item15 mLableMiddle">Company liable</div>
+      <div class="grid1-item item16 rLabelMiddle rLabelEnd">PPT is levied on the upstream petroleum profits of companies engaged in petroleum operations.</div>
+      <div class="grid1-item item17 ">Rate <br> S 21(1)(2) of PPTA Deep Offshore PSC Act S 3(1)</div>
+      <div class="grid1-item item18 rLabelEnd">
+        <ul>
+          <li>85% for petroleum operations carried out under a Joint Venture (JV) arrangement with the Nigerian National Petroleum Corporation (NNPC) or any traditional oil concession after 5 years.</li><br>
+          <li>65.75% for non PSC operation in its first 5 years during which the company has  not fully amortised all pre-production capitalized expenditure</li>
+          <li>50% for petroleum operations under Production Sharing Contracts (PSC).</li>
+        </ul>
+      </div>
+
+      <div class="grid1-item item19 lLabelPry1 taxSumANDSch" id="taxSchTET">3. TERTIARY <br>EDUCATION <br>TAX (TET)</div>
+      <div class="grid1-item item20 mLableMiddle">Relevant Law</div>
+      <div class="grid1-item item21 rLabelMiddle rLabelEnd">Tertiary Education Trust Fund (Establishment etc.) Act 2011</div>
+      <div class="grid1-item item22 ">Taxable Persons Rate [S 1 (2)]</div>
+      <div class="grid1-item item23 ">2% of assessable profit, that is, tax adjusted profit before capital allowances.</div>
+
+      <div class="grid1-item item24 lLabelPry taxSumANDSch" id="taxSchIT">4. INFORMATION TECHNOLOGY (IT) TAX</div>
+      <div class="grid1-item item25 mLableMiddle">Relevant Law</div>
+      <div class="grid1-item item26 rLabelMiddle rLabelEnd">
+        <p>The tax is governed by the National Information Technology</p>
+        <p>Development Act (NITDA) 2007</p>
+      </div>
+      <div class="grid1-item item27 ">Entities Liable NITDA Schedule III </div>
+      <div class="grid1-item item28 ">
+        <p>IT Tax is payable by specified companies with turnover of N100 million and above.</p>
+        <ul>
+          <li>GSM service providers and all telecommunications companies</li><br>
+          <li>Cyber companies and internet providers</li>
+          <li>Pension managers and pension related companies</li>
+          <li>Banks and other financial institutions</li>
+          <li>Insurance companies</li>
+        </ul>
+      </div>
+      <div class="grid1-item item29 ">Rate [S 12 (2)(a)]</div>
+      <div class="grid1-item item30">1% of Profit Before Tax</div>
+      
+      <div class="grid1-item item31 lLabelPry taxSumANDSch" id="taxSchWHT">5. WITHHOLDING TAX </div>
+      <div class="grid1-item item32 mLableMiddle">Relevant Provisions</div>
+      <div class="grid1-item item33 rLabelMiddle rLabelEnd">
+        <p>CITA, PITA, PPTA and WHT Regulations.</p>
+      </div>
+      <div class="grid1-item item34 ">Obligation to deduct WHT [CITA S 78- S 81, PITA S 68 – S 72, and WHT Regulations] </div>
+      <div class="grid1-item item35 ">
+        <p>WHT is an advance payment of income tax deductible at source on specified transactions. It can be applied as a tax credit against income tax liability in most instances.</p>
+        <p>Persons required to deduct WHT are all companies, and organisations or establishments that operate Pay-As-You-Earn Scheme. </p>
+      </div>
+      <div class="grid1-item item36"><p>Rate [S 12 (2)(a)]</p>
+        <div class="grid1-subCont-pg8">
+          <div class="grid1-subCont item1 sub-header">Transactions</div>
+          <div class="grid1-subCont item2 sub-header">Comp-<br>anies</div>
+          <div class="grid1-subCont item3 sub-header">Indivi-<br>duals</div>
+          <div class="grid1-subCont item4">Dividend, Interest and rents</div>
+          <div class="grid1-subCont item5">10%</div>
+          <div class="grid1-subCont item6">10%</div>
+          <div class="grid1-subCont item7">Royalties</div>
+          <div class="grid1-subCont item8">10%</div>
+          <div class="grid1-subCont item9">5%</div>
+          <div class="grid1-subCont item10">Hire of equipment, motor vehicles, plants, and machinery</div>
+          <div class="grid1-subCont item11">10%</div>
+          <div class="grid1-subCont item12">10%</div>
+          <div class="grid1-subCont item13">Commission, consultancy, technical and management fees, legal fees, audit fees, and other professional fees </div>
+          <div class="grid1-subCont item14">10%</div>
+          <div class="grid1-subCont item15">5%</div>
+          <div class="grid1-subCont item16">Building, construction and related activities excluding one single delivery, survey, and installation. </div>
+          <div class="grid1-subCont item17">10%</div>
+          <div class="grid1-subCont item18">5%</div>
+          <div class="grid1-subCont item19">All types of contracts and agency arrangements, other than sales in the ordinary course of business </div>
+          <div class="grid1-subCont item20">5%</div>
+          <div class="grid1-subCont item21">5%</div>
+          <div class="grid1-subCont item22">Directors' fees</div>
+          <div class="grid1-subCont item23">10%</div>
+          <div class="grid1-subCont item24">10%</div>
+        </div>
+      </div>
+      <div class="grid1-item item37 lLabelPry taxSumANDSch" id="taxSchCGT">6. CAPITAL GAINS TAX (CGT)</div>
+      <div class="grid1-item item38 mLableMiddle">Rate [S 2 (1)]</div>
+        <div class="grid1-item item39 rLabelMiddle rLabelEnd">
+        <p>10%</p>
+        <p>CGT is chargeable on capital gains accruing to any person (company or individual) making a disposal of assets. </p>
+      </div>
+      <div class="grid1-item item40 mLableMiddle">Chargeable Assets [S 3]</div>
+      <div class="grid1-item item41 rLabelEnd">
+        <ul>
+          <li>Options, debts and incorporeal property generally</li><br>
+          <li>Any currency other than Nigeria currency</li>
+          <li>Any form of property created by the person disposing of it, or otherwise coming to be owned without being acquired</li>
+          <li>Goodwill</li>
+          <li>Copyrights</li>
+          <li>Buildings </li>
+          <li>Chattels etc</li>
+        </ul>
+      </div>
+      <!--
+      <div class="grid1-item item42 lLabelPry taxSumANDSch" >7. VALUE ADDED TAX (VAT)</div>
+      <div class="grid1-item item43 mLableMiddle">Relevant law</div>
+        <div class="grid1-item item44 rLabelMiddle rLabelEnd">
+          <p>VAT Act LFN 2004 as amended.</p>
+          <p>VAT is chargeable on the supply of taxable goods and services except items specifically stated as exempt or zero-rated.</p>
+        </div>
+      <div class="grid1-item item45 mLableMiddle">Taxable Persons [S 46] </div>
+      <div class="grid1-item item46 rLabelEnd">
+        <p>A taxable person means an individual or body of individuals, family, corporations sole, trustee or executor or a person who carries out in a place an economic activity, a person exploiting tangible or intangible property for the purpose of obtaining income therefrom by way of trade or business or a person or agency of government acting in that capacity.</p>
+      </div>
+      <div class="grid1-item item47 mLableMiddle">Rate [S 4] </div>
+      <div class="grid1-item item48 rLabelEnd">
+        <p>7.5% of the value of goods and services</p>
+      </div>-->
+    </div><!-- ---/grid1-container-pg8 ---->
+    <hr>
+    <div class="grid2-SubContainer-pg8"><!-- ---grid1-container-pg8 ---->
+      <div class="grid1-item item1 lLabelPry topRow" >Qualifying Expenditure</div>
+      <div class="grid1-item item2 mLableTop topRow">Initial Allowance</div>
+      <div class="grid1-item item3 rLabelTop rLabelEnd topRow">Annual Allowance</div>
+
+      <div class="grid1-item item4 ">Building (Industrial & Non-Industrial)</div>
+      <div class="grid1-item item5 rLabelEnd">15%</div>
+      <div class="grid1-item item6 rLabelEnd">10%</div>
+      <div class="grid1-item item7 rLabelEnd">Mining</div>
+      <div class="grid1-item item8 rLabelEnd">95%</div>
+      <div class="grid1-item item9 rLabelEnd">Nil</div>
+      <div class="grid1-item item10">Plant:
+        <ul>
+          <li>Agriculture Production</li>
+          <li>Others</li>
+        </ul>
+      </div>
+      <div class="grid1-item item11 rLabelEnd"><br><br>
+         <li>95%</li>
+         <li>50%</li>
+      </div>
+      <div class="grid1-item item12 rLabelEnd"><br><br>
+         <li>Nil</li>
+         <li>25%</li>
+      </div>
+      <div class="grid1-item item13 rLabelEnd">Furniture and Fittings</div>
+      <div class="grid1-item item14 rLabelEnd">25%</div>
+      <div class="grid1-item item15 rLabelEnd">20%</div>
+      <div class="grid1-item item16">Motor Vehicles:
+        <ul>
+          <li>Public transportation</li>
+          <li>Others</li>
+        </ul>
+      </div>
+      <div class="grid1-item item17 rLabelEnd"><br><br>
+         <li>95%</li>
+         <li>50%</li>
+      </div>
+      <div class="grid1-item item18 rLabelEnd"><br><br>
+         <li>Nil</li>
+         <li>25%</li>
+      </div>
+      <div class="grid1-item item19">Plantation Equipment</div>
+      <div class="grid1-item item20 rLabelEnd">95%</div>
+      <div class="grid1-item item21 rLabelEnd">Nil</div>
+      <div class="grid1-item item22 rLabelEnd">Housing Estate</div>
+      <div class="grid1-item item23 rLabelEnd">50%</div>
+      <div class="grid1-item item24 rLabelEnd">25%</div>
+      <div class="grid1-item item25">Ranching and Plantation</div>
+      <div class="grid1-item item26 rLabelEnd">30%</div>
+      <div class="grid1-item item27 rLabelEnd">50%</div>
+      <div class="grid1-item item28 rLabelEnd">Research and Development</div>
+      <div class="grid1-item item29 rLabelEnd">95%</div>
+      <div class="grid1-item item30 rLabelEnd">Nil</div>
+    </div>
+    <hr>
+    <a href="#page9" id="pg8LastBtn" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all">Next</a>
+
+  </div><!----/Main Section Ends--> 
+
+<div data-role="footer" id="pg7homeFooterBar"><!-- footer -->
+  <div class="scrollBtns">
+    <a href="#pg8Sections" data-ajax="false" data-transition="slideup" class="ui-icon-carat-u ui-btn-icon-left ui-corner-all scrollBtn" id="scrollBtnU"></a>
+    <a href="#pg8LastBtn" data-ajax="false" data-rel data-transition="slidedown" class="ui-icon-carat-d ui-btn-icon-right ui-corner-all scrollBtn" id="scrollBtnD"></a>
+  </div>
+</div><!-- /footer -->
+</div><!-- /page8 -->
+
+
+<!-- Start of Ninth page. Page9- Tax Rates & Schedules -->
+<div data-role="page" id="page9">
+
+<div data-role="header" data-position="fixed" id="pg9HeaderBar">
+  <h4 id="pg9HeaderBarTitle">Tax Rates & Schedules- Contd</h4>
+  <!--<a href="#home"class="ui-btn ui-icon-home ui-btn-icon-notext" id="pg9HeaderIconL">home</a>
+  <a data-rel = "back" href="" class="ui-btn ui-icon-back ui-btn-icon-notext" id="pg9HeaderIconL">back</a>-->
+  <div data-role="navbar">
+      <ul>
+        <li><a data-rel="back" href="#page8" data-icon="arrow-l" id="page4To2Btn" data-direction="reverse">Back</a></li>
+        <li><a href="#home" data-icon="home" id="page4ToHomeBtn" data-direction="reverse" >Home</a></li>
+      </ul>    
+  </div>
+</div><!-- /header -->
+
+<div role="main" class="ui-content" id="pg9homeBody">
+  <hr>
+    <div class="finActSections">
+    <p class="finActSectionsP1" id="pg9Sections">Sections</p>
+    <p><a id="pg9SectionItem1" href="#taxSchVAT" data-ajax="false">7. Value Added Tax (VAT)</a></p>
+    <p><a id="pg9SectionItem2" href="#pitSection" data-ajax="false">8. Personal Income Tax (PIT)</a></p>
+    <p><a id="pg9SectionItem3" href="#taxSchPEN" data-ajax="false">9. Pension Contribution</a></p>
+    <p><a id="pg9SectionItem4" href="#taxSchITF" data-ajax="false">10. Industrial Training Fund (ITF) Contribution</a></p>
+    <p><a id="pg9SectionItem5" href="#taxSchNSITF" data-ajax="false">11. Employee Compensation Scheme</a></p>
+    <p><a id="pg9SectionItem6" href="#taxSchNHF" data-ajax="false">12. National Housing Fund (NHF) Contribution</a></p>
+    <p><a id="pg9SectionItem7" href="#taxSchSTAMP" data-ajax="false">13. Stamp Duties</a></p>
+    <p> <a id="pg9SectionItem8" href="#taxSchCUSTOM" data-ajax="false">14. Customs And Excise Duties</a></p>
+    </div>
+  <hr>
+  <div class="grid1-container-pg9">
+    <div class="grid1-item item1 lLabelPry taxSumANDSch" id="taxSchVAT">7. VALUE ADDED TAX (VAT)</div>
+    <div class="grid1-item item2 mLableTop">Relevant law</div>
+      <div class="grid1-item item3 rLabelMiddle rLabelEnd">
+        <p>VAT Act LFN 2004 as amended.</p>
+        <p>VAT is chargeable on the supply of taxable goods and services except items specifically stated as exempt or zero-rated.</p>
+      </div>
+    <div class="grid1-item item4 mLableMiddle">Taxable Persons [S 46] </div>
+    <div class="grid1-item item5 rLabelEnd">
+      <p>A taxable person means an individual or body of individuals, family, corporations sole, trustee or executor or a person who carries out in a place an economic activity, a person exploiting tangible or intangible property for the purpose of obtaining income therefrom by way of trade or business or a person or agency of government acting in that capacity.</p>
+    </div>
+    <div class="grid1-item item6 mLableMiddle">Rate [S 4] </div>
+    <div class="grid1-item item7 rLabelEnd">
+      <p>7.5% of the value of goods and services</p>
+    </div>
+
+    <div class="grid1-item item8 lLabelPry taxSumANDSch" id="pitSection">8. PERSONAL INCOME TAX (PIT)</div>
+      <div class="grid1-item item9 mLableTop">Rates <br>[Schedule 6]</div>
+      <div class="grid1-item item10 rLabelEnd">
+        <p>Personal Income Tax (PIT) is a tax levied on individuals including employees, partners in a partnership, unincorporated trust, joint ventures, families and communities. It is  imposed based on source and  residency rules. </p>
+        <p>PIT rate is applied on a graduated scale and taxable income bands as set out below (See below table):</p>
+        <div class="grid1-subCont-pg9">
+          <div class="grid1-subCont item1 sub-header">Tax Band <br>(N)</div>
+          <div class="grid1-subCont item2 sub-header">Rate<br>%</div>
+          <div class="grid1-subCont item3">First 300,000</div>
+          <div class="grid1-subCont item4">7</div>
+          <div class="grid1-subCont item5">Next 300,000</div>
+          <div class="grid1-subCont item6">11</div>
+          <div class="grid1-subCont item7">Next 500,000</div>
+          <div class="grid1-subCont item8">15</div>
+          <div class="grid1-subCont item9">Next 500,000</div>
+          <div class="grid1-subCont item10">19</div>
+          <div class="grid1-subCont item11">Next 1,600,000</div>
+          <div class="grid1-subCont item12">21</div>
+          <div class="grid1-subCont item13">Above 3,200,000</div>
+          <div class="grid1-subCont item14">24</div>
+        </div>
+      </div>
+    <div class="grid1-item item11 mLableMiddle">Minimum tax [S 37, schedule 6] </div>
+    <div class="grid1-item item12 rLabelEnd">
+      <p>Every taxable person is liable to a minimum income tax of 1% of their gross income. This is triggered where actual tax payable after all reliefs and allowances is less than 1% of gross income. </p>
+    </div>
+    <div class="grid1-item item13 mLableMiddle">Reliefs Deductions [S 33, Schedule 6]</div>
+    <div class="grid1-item item14 rLabelEnd">
+      <ul>
+        <li>Consolidated relief allowance: Higher of N200,000 or 1% of gross income, plus 20% of gross income</li>
+        <li>Child allowance:  N2,500 for each child up to a maximum of four children, provided that one is above 16 years or married unless in a recognised school, under articleship or learning a trade.</li>
+        <li>Dependent relative:  N2,000 for each dependent relative up to a maximum of two who are widowed or infirmed or incapacitated by old age.</li>
+        <li>Deductions allowed: NHF contribution, National Health Insurance Scheme, Life  Assurance Premium, National Pension Scheme and Gratuities. </li>
+        <li>Reimbursements:  Expenses incurred in the performance of employment duties from which it is not intended that the  employee should make any gain or profit.</li>
+        <li>Interest and dividend: Interest earned from treasury bills, government and corporate bonds are exempt while  withholding tax at 10% is the final tax on other interests and dividend.</li>
+        <li>Interest on mortgage: Interest paid on mortgage loan for owner’s occupied property in any year is granted as a relief in the following year.</li>
+      </ul>
+    </div>
+
+    <div class="grid1-item item15 lLabelPry taxSumANDSch" id="taxSchPEN">9. PENSION CONTRIBUTION</div>
+    <div class="grid1-item item16 mLableTop">Relevant law</div>
+      <div class="grid1-item item17 rLabelMiddle rLabelEnd">
+        <p>Pension Reform Act (PRA) 2014</p>
+      </div>
+    <div class="grid1-item item18 mLableMiddle">Obligated persons
+        [S 2 (1),(2),(3)]</div>
+    <div class="grid1-item item19 rLabelEnd">
+      <p>All employers in the public sector, and private employers with 15 or more employees. </p>
+    </div>
+    <div class="grid1-item item20 mLableMiddle">Rate [S 4] </div>
+    <div class="grid1-item item21 rLabelEnd">
+      <p>Not less than 18% of monthly emoluments* (with a minimum contribution of 10% by the employer and up to 8% by the employee). The employer and/or the employee may make additional voluntary contributions.</p>
+      <p>Where an employer decides to solely contribute to the scheme, the contribution shall not be less than 20% of the employee’s monthly emolument.</p>
+    </div>
+
+    <div class="grid1-item item22 lLabelPry taxSumANDSch" id="taxSchITF">10. INDUSTRIAL TRAINING FUND (ITF) CONTRIBUTION</div>
+    <div class="grid1-item item23 mLableTop">Relevant law</div>
+      <div class="grid1-item item24 rLabelMiddle rLabelEnd">
+        <p>The ITF was established by Decree 47 of 1971 and amended in 2011. </p>
+        <p>The main objective of the Fund is to generate a pool of indigenous trained manpower to meet the needs of the Nigeria economy.</p>
+      </div>
+    <div class="grid1-item item25 mLableMiddle">Obligated persons [S 6 (1)]</div>
+    <div class="grid1-item item26 rLabelEnd">
+      <p>All employers with a minimum of 25 employees or annual turnover of N50
+        million.</p>
+    </div>
+    <div class="grid1-item item27 mLableMiddle">Rate [S 6 (1)]</div>
+    <div class="grid1-item item28 rLabelEnd">
+      <p>1% of annual payroll cost</p>
+    </div>
+
+    <div class="grid1-item item29 lLabelPry taxSumANDSch" id="taxSchNSITF">11. EMPLOYEE COMPENSATION SCHEME</div>
+    <div class="grid1-item item30 mLableTop">Scope</div>
+      <div class="grid1-item item31 rLabelMiddle rLabelEnd">
+        <p>All employers, including individuals, are required to register with the Nigeria Social Insurance Trust Fund (NSITF) and contribute to the scheme.</p>
+        <p>Employee compensation scheme repeals the workmen's compsensation Act and provides compensation for employees for any death, injury, disease or disabiity arising from or in the course of employment.</p>
+      </div>
+    <div class="grid1-item item32 mLableMiddle">Rate <br> [S33(1)42(1)] </div>
+    <div class="grid1-item item33 rLabelEnd">
+      <p>1% of total monthly payroll or amount assessed by the NSITF. Where the claim cost in respect of an employer exceeds 105% of the ordinary assessment of that employer, the NSITF Board may within 4 years levy a super assessment on the employer not exceeding 133% of the ordinary assessement for the year.</p>
+    </div>
+    <div class="grid1-item item34 lLabelPry taxSumANDSch" id="taxSchNHF">12. NATIONAL HOUSING FUND (NHF) CONTRIBUTION</div>
+      <div class="grid1-item item35 mLableTop">Objective</div>
+      <div class="grid1-item item36 rLabelMiddle rLabelEnd">
+        <p>The aims and objectives of the NHF is to provide loans to Nigerians for developing, purchasing or renovating houses and encourage housing finance among low and medium income earners. </p>
+        <p>The Fund provides long term loans to Mortgage Institutions for lending to contributors of the Fund.</p>
+      </div>
+    <div class="grid1-item item37 mLableMiddle">Rate [S 4 ] </div>
+    <div class="grid1-item item38 rLabelEnd">
+      <p>2.5% of monthly basic salary.</p>
+    </div>
+    <div class="grid1-item item39 mLableMiddle">Exemptions</div>
+    <div class="grid1-item item40 rLabelEnd">
+      <p>Nigerians earning less than N3,000 per annum and all expatriates regardless of income level.</p>
+    </div>
+
+    <div class="grid1-item item41 lLabelPry taxSumANDSch" id="taxSchSTAMP">13. STAMP DUTIES ACT</div>
+    <div class="grid1-item item42 mLableTop">Rate [ S 8 ]</div>
+      <div class="grid1-item item43 rLabelMiddle rLabelEnd">
+        <p>Stamp duty is tax on documents evidencing transactions between persons.</p>
+        <p>It is chargeable either at fixed rates or ad valorem (i.e., in proportion to the value of the consideration) depending on the class of instrument.</p>
+      </div>
+    <div class="grid1-item item44 mLableMiddle">Instruments liable to Stamp Duty [Section 3(1)]</div>
+    <div class="grid1-item item45 rLabelEnd">
+      <p>All instruments relating to an act to be performed in Nigeria must be stamped, except such instrument is specifically exempted. </p>
+    </div>
+
+    <div class="grid1-item item46 lLabelPry taxSumANDSch" id="taxSchCUSTOM">14. CUSTOMS AND EXCISE DUTIES</div>
+    <div class="grid1-item item47 mLableTop">Relevant law</div>
+      <div class="grid1-item item48 rLabelMiddle rLabelEnd">
+        <p>It is governed by the Custom and Excise Management Act (CEMA) and several other Acts and Regulations relating to customs and excise matters.</p>
+      </div>
+    <div class="grid1-item item49 mLableMiddle">Rate</div>
+    <div class="grid1-item item50 rLabelEnd">
+      <p>Rates vary for different items and are assessed with reference to the prevailing rates.</p>
+    </div>
+  </div><!-- ---/grid1-container-pg9 ---->
+
+  <a href="#page8" class="ui-btn ui-icon-arrow-l ui-btn-icon-left ui-corner-all" data-direction="reverse" id="pg9LastBtn">Back to Previous</a>
+</div><!----/Main Section Ends--> 
+
+<div data-role="footer" id="pg9homeFooterBar"><!-- footer -->
+  <div class="scrollBtns">
+    <a href="#pg9Sections" data-ajax="false" data-transition="slideup" class="ui-icon-carat-u ui-btn-icon-left ui-corner-all scrollBtn" id="scrollBtnU"></a>
+    <a href="#pg9LastBtn" data-ajax="false" data-rel data-transition="slidedown" class="ui-icon-carat-d ui-btn-icon-right ui-corner-all scrollBtn" id="scrollBtnD"></a>
+  </div>
+</div><!-- /footer -->
+</div><!-- /page9 -->
+
+</body>
+</html>

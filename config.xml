@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "io.imfastTax.sundayadegboye"
+    versionCode = "10"
+    version     = "1.0.0" >
+
+<!-- versionCode is optional and Android only -->
+
+  <name>Nig Tax Pad</name>
+
+  <description>
+      The Nigerian Tax Pad (Nig Tax Pad) is a portable summary of some of the major tax laws in Nigeria. It contains summary of Nigeria Taxes and Rates, PAYE Tax Calcuator and a review of the Finance Act 2019.
+  </description>
+
+  <author href="https://sundayadegboye.imfast.io/" email="adesung2005@yahoo.co.uk">
+      Sunday Adegboye
+  </author>
+  <!--<icon src="icon.png" />-->
+  <!--<plugin name="cordova-plugin-splashscreen" source="npm" />-->
+   <plugin name="cordova-plugin-splashscreen" spec="6.0.0" />
+
+
+    <platform name="android">
+        <icon src="res/icon/android/ldpi.png" density="ldpi" />
+        <icon src="res/icon/android/mdpi.png" density="mdpi" />
+        <icon src="res/icon/android/hdpi.png" density="hdpi" />
+        <icon src="res/icon/android/xhdpi.png" density="xhdpi" />
+        <icon src="res/icon/android/xxhdpi.png" density="xxhdpi" />
+        <icon src="res/icon/android/xxxhdpi.png" density="xxxhdpi" />
+    </platform>
+
+    <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="res/icon/android/screen-ldpi-portrait.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="res/icon/android/screen-mdpi-portrait.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="res/icon/android/screen-hdpi-portrait.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/icon/android/screen-xhdpi-portrait.png" />
+    <splash src="splash.png" />
+
+  <allow-intent href="tel:*"/>
+  <allow-intent href="sms:*"/>
+  <a href="mailto:*">
+  <a href="https://*/*"> <!-- This take care of all the https://.... -->
+  <!--<allow-intent href="*"/>     Allow all unrecognized URLs to open installed apps -->
+
+  <preference name="orientation" value="portrait"/>
+  <preference name="SplashScreenDelay" value="5000" />
+  <!--<plugin name="cordova-plugin-x-socialsharing" source="npm" />-->
+</widget>
