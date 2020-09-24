@@ -38,8 +38,8 @@
 
   <allow-intent href="tel:*"/>
   <allow-intent href="sms:*"/>
-  <a href="mailto:*">
-  <a href="https://*/*"> <!-- This take care of all the https://.... -->
+  <a href="mailto:*"/>
+  <a href="https://*/*"/> <!-- This take care of all the https://.... -->
   <!--<allow-intent href="*"/>     Allow all unrecognized URLs to open installed apps -->
 
   <preference name="orientation" value="portrait"/>
