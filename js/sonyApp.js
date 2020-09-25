@@ -271,7 +271,7 @@ penChr = penChr;
 nHFChr = nHFChr;
 taxableIncome = taxableIncome;
 deductAllw = penChr + nHFChr;
-deductAndRelief = consolRf + deductAllw;
+deductAndRelief = fConsolRF + deductAllw;
 
 tgrossPayAnnual = tgrossPay.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 netPayAnnual = netPay.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'); 
@@ -279,14 +279,13 @@ penChrAnnual = penChr.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 nHFChrAnnual = nHFChr.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 taxPayableAnnual = taxPayable.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 minTaxAnnual = minTax.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-taxableIncomeAnnual = taxableIncome.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 fConsolRF = fConsolRF.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 aEffectTax = effectTax.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 aDeductAllw = deductAllw.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 aDeductAndRelief = deductAndRelief.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-
 //Negative Taxable Income should be Nil
-//if(taxableIncomeAnnual < 0){taxableIncomeAnnual = 'No Tax'}else{taxableIncomeAnnual = taxPayableAnnual};
+if(taxableIncome < 0){taxableIncomeAnnual = 'Nil'}
+	else{taxableIncomeAnnual = taxableIncome.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')};
 
 annualFResult = [tgrossPayAnnual, taxableIncomeAnnual, netPayAnnual,  penChrAnnual, nHFChrAnnual, taxPayableAnnual, minTaxAnnual, fConsolRF, afirst300, anext600, anext1100, anext1600, anext3200, aover3200, tgrossPayAnnual, taxableIncomeAnnual, nonTaxable, minTaxAnnual, taxPayableAnnual, aEffectTax, aDeductAllw, aDeductAndRelief];
 //Minimum Tax format
@@ -315,13 +314,17 @@ mEffectTax = (monTax/monGross) *100;
 
 
 monGross = monGross.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-montaxableIncome = montaxableIncome.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'); 
+/*montaxableIncome = montaxableIncome.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');*/
 monNet = monNet.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'); 
 monPen = monPen.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 monNHF = monNHF.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 monTax = monTax.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 monminTax = monminTax.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 fmEffectTax = mEffectTax.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+//Negative Taxable Income should be Nil
+if(montaxableIncome < 0){montaxableIncome = 'Nil'}
+	else{montaxableIncome = montaxableIncome.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')};
+
 
 //annualFResult = [tgrossPayAnnual, taxableIncomeAnnual, netPayAnnual,  penChrAnnual, nHFChrAnnual, taxPayableAnnual, minTaxAnnual, consolRf, first300, next600, next1100, next1600, next3200, over3200, tgrossPayAnnual, taxableIncomeAnnual, nonTaxable, minTaxAnnual, taxPayableAnnual];
 monthFResult = [monGross, montaxableIncome, monNet, monPen, monNHF, monTax,  minTax, fConsolRF, afirst300, anext600, anext1100, anext1600, anext3200, aover3200, tgrossPayAnnual, taxableIncomeAnnual, nonTaxable, minTaxAnnual, taxPayableAnnual, fmEffectTax, aDeductAllw, aDeductAndRelief];

@@ -65,7 +65,9 @@
 		<!--<a href="#nav-panel" class="ui-btn ui-icon-bars ui-btn-icon-notext" id="homeHeaderIconL">bars</a>-->
 	<div data-role="navbar">
 	   	<ul>
-	     <li><a  id="myHome" href="#home" data-icon="home">Home</a></li>
+	     <li><a  id="myHome" href="#page8" data-icon="bullets">Taxes & Rates</a></li>
+       <li><a  id="myHome" href="#page3" data-icon="calendar">PIT Calculator</a></li>
+       <li><a  id="myHome" href="#page7" data-icon="bars">Fin Act 2019</a></li>
 	   	</ul>    
  	</div>
 </div><!-- /header -->
@@ -300,7 +302,7 @@
   <div data-role="navbar">
       <ul>
        <li><a href="#home" data-icon="home" id="page4ToHomeBtn" data-direction="reverse">Home</a></li>
-       <li><a href="#page3" data-icon="calendar" id="page4ToHomeBtn" data-direction="reverse">PIT Calculator</a></li>
+       <li><a href="#page3" data-icon="arrow-l" id="page4ToHomeBtn" data-direction="reverse">Back</a></li>
       </ul>    
   </div>
 </div><!-- /header -->
@@ -309,21 +311,32 @@
   <!-- Calculator Section Starts-->
   <br><br>
   <hr>
-  <p id="simpleCal">Annual PIT Details</p>
+  <div class="simpleCal">
+    <p>Annual PIT Details</p>
+    <div><span>Abbreviations:</span></div>
+    <div><span>Non-txb</span> = Non-Taxable Income</div>
+    <div><span>Ddtn allowed</span> = Total Deductions Allowed</div>
+    <div><span>Consol Ref</span> = Consolidated Reliefs</div>
+    <div><span>Ddtn & Reliefs</span> = Total Deductions & Reliefs</div>
+    <div><span>Txble Income</span> = Taxable Income</div>
+    <div><span>Tax Pybl</span>  = Tax Payable</div>
+    <div><span>Min Tax</span> = Minimum Tax</div>
+  </div> 
+  
   <hr>
   <button class="textview" id="pg4textview">
   <div class="grid3-container">
     <div class="grid3-item2 label2" ><span>Gross Income</span><div class="taxDetails" id="tDGross" type="submit">00.00</div></div>
-    <div class="grid3-item3 label2"><span>Non-taxable Income</span><div class="taxDetails" id="tDTaxable" type="submit">00.00</div></div>
-    <div class="grid3-item4 label2"><span>Deductions allowed</span><div class="taxDetails" id="tDNonTaxable" type="submit">00.00</div></div>
-    <div class="grid3-item5 label2" ><span>Consolidated Relief</span><div class="taxDetails" id="tDConsol" type="submit">00.00</div></div>
-    <div class="grid3-item6 label2"><span>Total Deductions & Relief</span><div class="taxDetails" id="tDNext600" type="submit">00.00</div></div>
-    <div class="grid3-item7 label2" id="grid3-item7"><span>Taxable Income</span><div class="taxDetails" id="tDMinTax" type="submit">00.00</div></div>
+    <div class="grid3-item3 label2"><span>Non-txbl</span><div class="taxDetails" id="tDTaxable" type="submit">00.00</div></div>
+    <div class="grid3-item4 label2"><span>Ddtn allowed</span><div class="taxDetails" id="tDNonTaxable" type="submit">00.00</div></div>
+    <div class="grid3-item5 label2" ><span>Consol Rel</span><div class="taxDetails" id="tDConsol" type="submit">00.00</div></div>
+    <div class="grid3-item6 label2"><span>Ddtn & Relief</span><div class="taxDetails" id="tDNext600" type="submit">00.00</div></div>
+    <div class="grid3-item7 label2" id="grid3-item7"><span>Txbl Income</span><div class="taxDetails" id="tDMinTax" type="submit">00.00</div></div>
 
-     <div class="grid3-item8 label2"><span>Tax payable</span><div class="taxDetails" id="tDNext600" type="submit">00.00</div></div>
-    <div class="grid3-item9 label2" id="grid3-item9"><span>Minimum Tax</span><div class="taxDetails" id="tDMinTax" type="submit">00.00</div></div>
+     <div class="grid3-item8 label2 taxDetailsSet1"><span>Tax Pybl</span><div class="taxDetails" id="tDNext600" type="submit">00.00</div></div>
+    <div class="grid3-item9 label2" id="grid3-item9"><span>Min Tax</span><div class="taxDetails" id="tDMinTax" type="submit">00.00</div></div>
 
-    <div class="grid3-item10 label1" id="grid3-Breakdown-Head">Breakdown of Tax Payable:</div>
+    <div class="grid3-item10 label1 taxDetailsSet1" id="grid3-Breakdown-Head">Breakdown of Tax Payable:</div>
     <div class="grid3-item11 label2" ><span>First $300,000</span><div class="taxDetails" id="tD300" type="submit">00.00</div></div>
     <div class="grid3-item12 label2"><span>Next $300,000</span><div class="taxDetails" id="tD600" type="submit">00.00</div></div>
     <div class="grid3-item13 label2"><span>Next $500,000</span><div class="taxDetails" id="tD1100" type="submit">00.00</div></div>
@@ -337,8 +350,8 @@
   <hr>
   <div class="pitDetails">
   <p>Personal Income Tax (PIT) is a tax levied on individuals including employees, partners in a partnership, unincorporated trust, joint ventures, families and communities. It is imposed based on source and residency rules. </p>
-  <p>PIT rate is applied on a graduated scale and taxable income bands</p>
-  <a href="#page9" class="ui-btn ui-icon-eye ui-btn-icon-left" id="pg4ShowDetails">Summary of PIT Reliefs & Rates </a>
+  <p>PIT rate is applied on a graduated scale on taxable income bands (gross income net of total deductions and reliefs).</p>
+  <a href="#page9" class="ui-btn ui-icon-eye ui-btn-icon-left" id="pg4ShowDetails">See summary of PIT Reliefs & Rates </a>
   </div>
 
   <!--<div>
@@ -748,7 +761,7 @@
 
   <div data-role="header" data-position="fixed" id="pg8HeaderBar">
     <a href="#home"class="ui-btn ui-icon-home ui-btn-icon-notext" id="pg7HeaderIconL">home</a>
-    <h4 id="pg8HeaderBarTitle">Tax Rates & Schedules</h4>
+    <h4 id="pg8HeaderBarTitle">Nigeria Taxes & Rates</h4>
     <a href="" data-rel="back" class="ui-btn ui-icon-back ui-btn-icon-notext" id="pg7HeaderIconL">back</a>
   </div><!-- /header -->
 
@@ -808,7 +821,7 @@
         </ul>
       </div>
 
-      <div class="grid1-item item19 lLabelPry1 taxSumANDSch" id="taxSchTET">3. TERTIARY <br>EDUCATION <br>TAX (TET)</div>
+      <div class="grid1-item item19 lLabelPry1 taxSumANDSch" id="taxSchTET">3. TERTIARY EDUCATION <br> TAX (TET)</div>
       <div class="grid1-item item20 mLableMiddle">Relevant Law</div>
       <div class="grid1-item item21 rLabelMiddle rLabelEnd">Tertiary Education Trust Fund (Establishment etc.) Act 2011</div>
       <div class="grid1-item item22 ">Taxable Persons Rate [S 1 (2)]</div>
@@ -839,37 +852,39 @@
       <div class="grid1-item item33 rLabelMiddle rLabelEnd">
         <p>CITA, PITA, PPTA and WHT Regulations.</p>
       </div>
-      <div class="grid1-item item34 ">Obligation to deduct WHT [CITA S 78- S 81, PITA S 68 – S 72, and WHT Regulations] </div>
+      <div class="grid1-item item34 ">Obligation to deduct WHT [CITA S 78- S 81, PITA S 68 – S 72, and WHT Regula- <br>tions] </div>
       <div class="grid1-item item35 ">
         <p>WHT is an advance payment of income tax deductible at source on specified transactions. It can be applied as a tax credit against income tax liability in most instances.</p>
         <p>Persons required to deduct WHT are all companies, and organisations or establishments that operate Pay-As-You-Earn Scheme. </p>
       </div>
       <div class="grid1-item item36"><p>Rate [S 12 (2)(a)]</p>
+        <div>*Coy = Companies</div>
+         <div>*Ind = Individuals</div><br>
         <div class="grid1-subCont-pg8">
           <div class="grid1-subCont item1 sub-header">Transactions</div>
-          <div class="grid1-subCont item2 sub-header">Comp-<br>anies</div>
-          <div class="grid1-subCont item3 sub-header">Indivi-<br>duals</div>
+          <div class="grid1-subCont item2 sub-header padLeftPg8">*Coy<br>%</div>
+          <div class="grid1-subCont item3 sub-header padLeftPg8">*Ind<br>%</div> 
           <div class="grid1-subCont item4">Dividend, Interest and rents</div>
-          <div class="grid1-subCont item5">10%</div>
-          <div class="grid1-subCont item6">10%</div>
+          <div class="grid1-subCont item5 padLeftPg8">10</div>
+          <div class="grid1-subCont item6 padLeftPg8">10</div>
           <div class="grid1-subCont item7">Royalties</div>
-          <div class="grid1-subCont item8">10%</div>
-          <div class="grid1-subCont item9">5%</div>
+          <div class="grid1-subCont item8 padLeftPg8"> 10</div>
+          <div class="grid1-subCont item9 padLeftPg8">5</div>
           <div class="grid1-subCont item10">Hire of equipment, motor vehicles, plants, and machinery</div>
-          <div class="grid1-subCont item11">10%</div>
-          <div class="grid1-subCont item12">10%</div>
+          <div class="grid1-subCont item11 padLeftPg8">10</div>
+          <div class="grid1-subCont item12 padLeftPg8">10</div>
           <div class="grid1-subCont item13">Commission, consultancy, technical and management fees, legal fees, audit fees, and other professional fees </div>
-          <div class="grid1-subCont item14">10%</div>
-          <div class="grid1-subCont item15">5%</div>
+          <div class="grid1-subCont item14 padLeftPg8">10</div>
+          <div class="grid1-subCont item15 padLeftPg8">5</div>
           <div class="grid1-subCont item16">Building, construction and related activities excluding one single delivery, survey, and installation. </div>
-          <div class="grid1-subCont item17">10%</div>
-          <div class="grid1-subCont item18">5%</div>
+          <div class="grid1-subCont item17 padLeftPg8">10</div>
+          <div class="grid1-subCont item18 padLeftPg8">5</div>
           <div class="grid1-subCont item19">All types of contracts and agency arrangements, other than sales in the ordinary course of business </div>
-          <div class="grid1-subCont item20">5%</div>
-          <div class="grid1-subCont item21">5%</div>
+          <div class="grid1-subCont item20 padLeftPg8">5</div>
+          <div class="grid1-subCont item21 padLeftPg8">5</div>
           <div class="grid1-subCont item22">Directors' fees</div>
-          <div class="grid1-subCont item23">10%</div>
-          <div class="grid1-subCont item24">10%</div>
+          <div class="grid1-subCont item23 padLeftPg8">10</div>
+          <div class="grid1-subCont item24 padLeftPg8">10</div>
         </div>
       </div>
       <div class="grid1-item item37 lLabelPry taxSumANDSch" id="taxSchCGT">6. CAPITAL GAINS TAX (CGT)</div>
@@ -909,8 +924,8 @@
     <hr>
     <div class="grid2-SubContainer-pg8"><!-- ---grid1-container-pg8 ---->
       <div class="grid1-item item1 lLabelPry topRow" >Qualifying Expenditure</div>
-      <div class="grid1-item item2 mLableTop topRow">Initial Allowance</div>
-      <div class="grid1-item item3 rLabelTop rLabelEnd topRow">Annual Allowance</div>
+      <div class="grid1-item item2 mLableTop topRow">*Int Allw</div>
+      <div class="grid1-item item3 rLabelTop rLabelEnd topRow">*Anl Allw</div>
 
       <div class="grid1-item item4 ">Building (Industrial & Non-Industrial)</div>
       <div class="grid1-item item5 rLabelEnd">15%</div>
@@ -920,34 +935,34 @@
       <div class="grid1-item item9 rLabelEnd">Nil</div>
       <div class="grid1-item item10">Plant:
         <ul>
-          <li>Agriculture Production</li>
+          <li>Agriculture Production</li><br>
           <li>Others</li>
         </ul>
       </div>
       <div class="grid1-item item11 rLabelEnd"><br><br>
-         <li>95%</li>
-         <li>50%</li>
+         <li class="liststylePg8">95%</li><br><br>
+         <li class="liststylePg8">50%</li>
       </div>
       <div class="grid1-item item12 rLabelEnd"><br><br>
-         <li>Nil</li>
-         <li>25%</li>
+         <li class="liststylePg8">Nil</li><br><br>
+         <li class="liststylePg8">25%</li>
       </div>
       <div class="grid1-item item13 rLabelEnd">Furniture and Fittings</div>
       <div class="grid1-item item14 rLabelEnd">25%</div>
       <div class="grid1-item item15 rLabelEnd">20%</div>
       <div class="grid1-item item16">Motor Vehicles:
         <ul>
-          <li>Public transportation</li>
+          <li>Public transportation</li><br>
           <li>Others</li>
         </ul>
       </div>
       <div class="grid1-item item17 rLabelEnd"><br><br>
-         <li>95%</li>
-         <li>50%</li>
+         <li class="liststylePg8">95%</li><br><br>
+         <li class="liststylePg8">50%</li>
       </div>
       <div class="grid1-item item18 rLabelEnd"><br><br>
-         <li>Nil</li>
-         <li>25%</li>
+         <li class="liststylePg8">Nil</li><br><br>
+         <li class="liststylePg8">25%</li>
       </div>
       <div class="grid1-item item19">Plantation Equipment</div>
       <div class="grid1-item item20 rLabelEnd">95%</div>
@@ -962,6 +977,7 @@
       <div class="grid1-item item29 rLabelEnd">95%</div>
       <div class="grid1-item item30 rLabelEnd">Nil</div>
     </div>
+      <div class="pg8Settings1">*Int Allw = Initial Allowance; <br>*Anl Allw = Annual Allowance</div>
     <hr>
     <a href="#page9" id="pg8LastBtn" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all">Next</a>
 
@@ -980,7 +996,7 @@
 <div data-role="page" id="page9">
 
 <div data-role="header" data-position="fixed" id="pg9HeaderBar">
-  <h4 id="pg9HeaderBarTitle">Tax Rates & Schedules- Contd</h4>
+  <h4 id="pg9HeaderBarTitle">Nigeria Taxes & Rates- Contd</h4>
   <!--<a href="#home"class="ui-btn ui-icon-home ui-btn-icon-notext" id="pg9HeaderIconL">home</a>
   <a data-rel = "back" href="" class="ui-btn ui-icon-back ui-btn-icon-notext" id="pg9HeaderIconL">back</a>-->
   <div data-role="navbar">
