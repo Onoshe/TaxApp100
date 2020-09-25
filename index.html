@@ -13,9 +13,12 @@
         	$(document).on('mobileinit', function(){
         		$.mobile.defaultPageTransition = 'slidefade';
         	});
-        	
+        	$(document).ready(function(){myFunction(x)});
+          $(document).ready(function(){myFunction2(x)});
+          $(document).ready(function(){myFunction3(x)});
+          $(document).ready(function(){myFunction4(x)});
         	/*
-        	$(document).ready(function(){showMyFavs()});
+        	$(document).ready(function(){myFunction(x)});
         	$(document).ready(function(){fadingVerses()});
         	*/
         </script>
@@ -232,7 +235,7 @@
     <div class="grid1-item7 label3" ><span>NHF</span><div class="taxResult" id="taxResultNHF" type="submit" >00.00</div></div>
     <div class="grid1-item8 label3"><span id="taxResultTaxDueSpan">Tax Payble</span><div class="taxResult" id="taxResultTaxDue" type="submit">00.00</div></div>
 
-    <div class="grid1-item9 label1" id="grid1-effectiveTax">Effective Tax Rate :<span id="grid1-effectiveTR" class="taxResult">0</span></div>
+    <div class="grid1-item9 label1" id="grid1-effectiveTax">Effective Tax Rate :<span id="grid1-effectiveTR" class="taxResult taxResultEffecTax">0</span></div>
   </div>
   </button>
 
@@ -311,7 +314,7 @@
   <!-- Calculator Section Starts-->
   <br><br>
   <hr>
-  <div class="simpleCal">
+  <!--<div class="simpleCal">
     <p>Annual PIT Details</p>
     <div><span>Abbreviations:</span></div>
     <div><span>Non-txb</span> = Non-Taxable Income</div>
@@ -321,20 +324,23 @@
     <div><span>Txble Income</span> = Taxable Income</div>
     <div><span>Tax Pybl</span>  = Tax Payable</div>
     <div><span>Min Tax</span> = Minimum Tax</div>
-  </div> 
-  
+  </div>--> 
+    <div class="simpleCal">
+    <p>Annual PIT Details</p>
+  </div>
+
   <hr>
   <button class="textview" id="pg4textview">
   <div class="grid3-container">
     <div class="grid3-item2 label2" ><span>Gross Income</span><div class="taxDetails" id="tDGross" type="submit">00.00</div></div>
-    <div class="grid3-item3 label2"><span>Non-txbl</span><div class="taxDetails" id="tDTaxable" type="submit">00.00</div></div>
-    <div class="grid3-item4 label2"><span>Ddtn allowed</span><div class="taxDetails" id="tDNonTaxable" type="submit">00.00</div></div>
-    <div class="grid3-item5 label2" ><span>Consol Rel</span><div class="taxDetails" id="tDConsol" type="submit">00.00</div></div>
-    <div class="grid3-item6 label2"><span>Ddtn & Relief</span><div class="taxDetails" id="tDNext600" type="submit">00.00</div></div>
-    <div class="grid3-item7 label2" id="grid3-item7"><span>Txbl Income</span><div class="taxDetails" id="tDMinTax" type="submit">00.00</div></div>
+    <div class="grid3-item3 label2"><span>Non-taxable Income</span><div class="taxDetails" id="tDTaxable" type="submit">00.00</div></div>
+    <div class="grid3-item4 label2"><span>Total deductions</span><div class="taxDetails" id="tDNonTaxable" type="submit">00.00</div></div>
+    <div class="grid3-item5 label2" ><span>Consolidated Reliefs</span><div class="taxDetails" id="tDConsol" type="submit">00.00</div></div>
+    <div class="grid3-item6 label2"><span>Total deductions & Reliefs</span><div class="taxDetails" id="tDNext600" type="submit">00.00</div></div>
+    <div class="grid3-item7 label2" id="grid3-item7"><span>Taxable Income</span><div class="taxDetails" id="tDMinTax" type="submit">00.00</div></div>
 
-     <div class="grid3-item8 label2 taxDetailsSet1"><span>Tax Pybl</span><div class="taxDetails" id="tDNext600" type="submit">00.00</div></div>
-    <div class="grid3-item9 label2" id="grid3-item9"><span>Min Tax</span><div class="taxDetails" id="tDMinTax" type="submit">00.00</div></div>
+     <div class="grid3-item8 label2 taxDetailsSet1"><span>Tax Payable</span><div class="taxDetails" id="tDNext600" type="submit">00.00</div></div>
+    <div class="grid3-item9 label2" id="grid3-item9"><span>Minimum Tax</span><div class="taxDetails" id="tDMinTax" type="submit">00.00</div></div>
 
     <div class="grid3-item10 label1 taxDetailsSet1" id="grid3-Breakdown-Head">Breakdown of Tax Payable:</div>
     <div class="grid3-item11 label2" ><span>First $300,000</span><div class="taxDetails" id="tD300" type="submit">00.00</div></div>
@@ -861,9 +867,9 @@
         <div>*Coy = Companies</div>
          <div>*Ind = Individuals</div><br>
         <div class="grid1-subCont-pg8">
-          <div class="grid1-subCont item1 sub-header">Transactions</div>
-          <div class="grid1-subCont item2 sub-header padLeftPg8">*Coy<br>%</div>
-          <div class="grid1-subCont item3 sub-header padLeftPg8">*Ind<br>%</div> 
+          <div class="grid1-subCont item1 sub-header responsivePg8">Transactions</div>
+          <div class="grid1-subCont item2 sub-header padLeftPg8 responsivePg8">*Coy<br>%</div>
+          <div class="grid1-subCont item3 sub-header padLeftPg8 responsivePg8">*Ind<br>%</div> 
           <div class="grid1-subCont item4">Dividend, Interest and rents</div>
           <div class="grid1-subCont item5 padLeftPg8">10</div>
           <div class="grid1-subCont item6 padLeftPg8">10</div>
@@ -877,13 +883,13 @@
           <div class="grid1-subCont item14 padLeftPg8">10</div>
           <div class="grid1-subCont item15 padLeftPg8">5</div>
           <div class="grid1-subCont item16">Building, construction and related activities excluding one single delivery, survey, and installation. </div>
-          <div class="grid1-subCont item17 padLeftPg8">10</div>
+          <div class="grid1-subCont item17 padLeftPg8">2.5</div>
           <div class="grid1-subCont item18 padLeftPg8">5</div>
           <div class="grid1-subCont item19">All types of contracts and agency arrangements, other than sales in the ordinary course of business </div>
           <div class="grid1-subCont item20 padLeftPg8">5</div>
           <div class="grid1-subCont item21 padLeftPg8">5</div>
           <div class="grid1-subCont item22">Directors' fees</div>
-          <div class="grid1-subCont item23 padLeftPg8">10</div>
+          <div class="grid1-subCont item23 padLeftPg8">Nil</div>
           <div class="grid1-subCont item24 padLeftPg8">10</div>
         </div>
       </div>

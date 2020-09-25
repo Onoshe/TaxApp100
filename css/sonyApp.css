@@ -764,11 +764,12 @@ padding-right: 2px;
 #pg7HeaderIconL{background-color: teal;}
 #pg7HeaderIconR{background-color: teal;}
 
-.pg7Settings0{border: 2px solid white; border-radius: 10px; background-color: lightskyblue; padding: 10px;}
+.pg7Settings0{border: 2px solid white; border-radius: 10px; background-color: lightskyblue; padding: 10px; text-align: center;}
 .pg7Settings1{border: 2px solid grey; border-radius: 10px; background-color: #C2E3E3; padding-left: 10px; padding-right: 10px;}
 .pg7Settings1 > p {font-weight: bolder;}
 .pg7Settings2{border: 2px solid grey; border-radius: 10px; background-color: #C2E3E3; padding-left: 10px; padding-right: 10px;}
 .pg7Settings2 > p {font-weight: bolder;}
+.pg7Settings2 >div > p {font-weight: bolder;}
 #pg7homeBody > .sub-1 {background-color: lightsalmon; text-shadow: none;}
 #pg7SettingsID1, #pg7SettingsID2, #pg7SettingsID3, #pg7SettingsID4, #pg7SettingsID5, #pg7SettingsID6, #pg7SettingsID7, #pg7SettingsID8 {
 	padding-left: 10px; text-align: left; background-color: lightskyblue; border: 1px solid white; border-radius: 5px;}
