@@ -415,11 +415,12 @@ function addCommas(x){
 	parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	return parts.join(".");
 }
-*/
+
 $(function(){
 	//var test = $('#contTest').css("margin");
-	$('.responsivePg8').click(function(){
-	var x = $('.responsivePg8').css("font-size");
+	$("#pg7SettingsMinTax1c").click(function(){
+	var x = $("#pg7SettingsMinTax1c").css("color");
 	alert(x);
 	});
 });
+*/

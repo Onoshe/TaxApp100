@@ -756,6 +756,8 @@ padding-right: 2px;
 	margin-left: 2px;
 	margin-right: 2px;
 }
+#pg7SettingsMinTax1a{text-decoration: none; color: rgb(51, 51, 51); font-weight: normal;}
+#pg7SettingsMinTax1b{text-decoration: underline; color: dodgerblue; font-weight: bolder;}
 
 #pg7homeBody{
 	background-image: linear-gradient(#bd9e95, #FFE4C4, rgba(239, 239, 239));
@@ -798,6 +800,8 @@ padding-right: 2px;
 #pg8HeaderIconL{background-color: teal;}
 #pg8HeaderIconR{background-color: teal;}
 .taxSumANDSch{background-color: coral; color: white}
+
+.colorbckgrdP8{background-color: rgba(125, 204, 219, 0.4);}
 
 .grid1-container-pg8{
 	display: grid;
