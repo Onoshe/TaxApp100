@@ -15,8 +15,11 @@
         	});
         	$(document).ready(function(){myFunction(x)});
           $(document).ready(function(){myFunction2(x)});
+          $(document).ready(function(){myFunction2b(x)});
           $(document).ready(function(){myFunction3(x)});
           $(document).ready(function(){myFunction4(x)});
+           $(document).ready(function(){myFunction5(x)});
+           $(document).ready(function(){myFunction6(x)});
         	/*
         	$(document).ready(function(){myFunction(x)});
         	$(document).ready(function(){fadingVerses()});
@@ -77,16 +80,16 @@
 
 <div role="main" class="ui-content" id="homeBody">
     <br><br>
-  	<div class="nig-Tax-System-Div nig-Tax-System-Home ">The Nigerian Tax Pad (Nig Tax Pad) is a light-weight portable summary of some of the major tax laws in Nigeria. The Pad contains a summary of the tax extant laws, a detailed PAYE Tax Calcuator for quick PIT computation and a review of the Finance Act 2019. However, the contents on this app is meant for general purpose use only. It is not a replacement for specific advice.
+  	<div class="nig-Tax-System-Div nig-Tax-System-Home ">The Nigerian Tax Pad (Nig Tax Pad) is a light-weight portable summary of some of the major tax laws in Nigeria. The app contains a summary of the extant tax laws, a detailed PAYE Tax Calcuator for quick PIT computation and a review of the Finance Act 2019. However, the contents on this app is meant for general purpose use only. It is not a replacement for specific advice.
       <p class="nig-Tax-System-Span"> We accept no liability for any action taken or not taken based on the contents of this app.</p>
      </div> 
      <br>
   	<hr>
-    <a href="#page8" id="homeTaxBtn1"><button id="homeTaxBtn1a" data-icon="bullets">Summary of Nigeria Taxes &  Rates</button></a>
+    <a href="#page8" id="homeTaxBtn1"><button id="homeTaxBtn1a" data-icon="bullets" class="navBtns-Home">Summary of Nigeria Taxes &  Rates</button></a>
     <hr>
-    <a href="#page3" id="homeTaxBtn2"><button id="homeTaxBtn2a" data-icon="calendar">Personal Income Tax (PIT) Calculator</button></a>
+    <a href="#page3" id="homeTaxBtn2"><button id="homeTaxBtn2a" data-icon="calendar" class="navBtns-Home">Personal Income Tax (PIT) Calculator</button></a>
     <hr>
-    <a href="#page7" id="homeTaxBtn3"><button id="homeTaxBtn3a" data-icon="bars">Finance Act 2019</button></a>
+    <a href="#page7" id="homeTaxBtn3"><button id="homeTaxBtn3a" data-icon="bars" class="navBtns-Home">Finance Act 2019</button></a>
    <hr>
     <br>
     <div class="contact-Section">
@@ -94,7 +97,7 @@
             <div id="contacts1">
               <ul id="contacts1UL">
                 <div id="contacts1Head">Adesung Professional Services</div>
-                <li><a href="#"><img src="res/icon/location1.jpg" alt="+2348064205333" class="ui-li-icon">7, Bosude Close, Off Ishola Bello St, <br><span id="contacts1ULSpan">Akiode, Ojodu-Berger, Ikeja, Lagos</span></a></li>
+                <li><a href="#"><img src="res/icon/location1.jpg" alt="+2348064205333" class="ui-li-icon">1, Mudashiru Awe St,<br><span id="contacts1ULSpan">Off Jibowu Str, Yaba, Lagos</span></a></li>
                 <li><a href="mailto:adesung2005@yahoo.co.uk"><img src="res/icon/mail1.png" alt="mailto:adesung2005@yahoo.co.uk" class="ui-li-icon">adesung2005@yahoo.co.uk</a></li>
                 <li><a href="tel:+2348064205333"><img src="res/icon/phone1.jpg" alt="+2348064205333" class="ui-li-icon">+2348064205333</a></li>
               </ul>
@@ -226,14 +229,14 @@
   <button class="textview" id="textview">
   <div class="grid1-container">
     <div class="grid1-item1 label1" id="grid1-Income-Head">Income:</div>
-    <div class="grid1-item2 label2" ><span>Gross</span><div class="taxResult" id="taxResultGross" type="submit">00.00</div></div>
-    <div class="grid1-item3 label2"><span>Taxable</span><div class="taxResult" id="taxResultTaxable" type="submit">00.00</div></div>
-    <div class="grid1-item4 label2"><span>Net</span><div class="taxResult" id="taxResultNet" type="submit">00.00</div></div>
+    <div class="grid1-item2 label2" ><span class="resultViewSpanHome">Gross</span><div class="taxResult" id="taxResultGross" type="submit">00.00</div></div>
+    <div class="grid1-item3 label2"><span class="resultViewSpanHome">Taxable</span><div class="taxResult" id="taxResultTaxable" type="submit">00.00</div></div>
+    <div class="grid1-item4 label2"><span class="resultViewSpanHome">Net</span><div class="taxResult" id="taxResultNet" type="submit">00.00</div></div>
 
     <div class="grid1-item5 label1" id="grid1-Deduction-Head">Deductions:</div>
-    <div class="grid1-item6 label3" ><span>Pension</span><div class="taxResult" id="taxResutPen" type="submit" >00.00</div></div>
-    <div class="grid1-item7 label3" ><span>NHF</span><div class="taxResult" id="taxResultNHF" type="submit" >00.00</div></div>
-    <div class="grid1-item8 label3"><span id="taxResultTaxDueSpan">Tax Payble</span><div class="taxResult" id="taxResultTaxDue" type="submit">00.00</div></div>
+    <div class="grid1-item6 label3" ><span class="resultViewSpanHome">Pension</span><div class="taxResult" id="taxResutPen" type="submit" >00.00</div></div>
+    <div class="grid1-item7 label3" ><span class="resultViewSpanHome">NHF</span><div class="taxResult" id="taxResultNHF" type="submit" >00.00</div></div>
+    <div class="grid1-item8 label3"><span id="taxResultTaxDueSpan" class="resultViewSpanHome">Tax Payable</span><div class="taxResult" id="taxResultTaxDue" type="submit">00.00</div></div>
 
     <div class="grid1-item9 label1" id="grid1-effectiveTax">Effective Tax Rate :<span id="grid1-effectiveTR" class="taxResult taxResultEffecTax">0</span></div>
   </div>
@@ -271,7 +274,7 @@
     <div class="grid2-item1 label1">Enter your taxable allowances:</div>
   	<div class="grid2-item2 label2" ><span>Basic</span><input class="taxdata" id="taxDataBasic" placeholder="Basic allowances" type="number"></div>
     <div class="grid2-item3 label2"><span>House</span><input class="taxdata" id="taxDataHouse"placeholder="House allowances" type="number" ></div>
-    <div class="grid2-item4 label2"><span>Transport</span><input class="taxdata" id="taxDataTran" placeholder="House allowances" type="number"></div>
+    <div class="grid2-item4 label2"><span>Transport</span><input class="taxdata" id="taxDataTran" placeholder="Transport allowances" type="number"></div>
 
     <div class="grid2-item5 label3" ><span>Others</span><input class="taxdata" id="taxDataOthers" placeholder="Other taxable allowances" type="number"></div>
     <div class="grid2-item6 label3"><span>Non-taxable allowance</span><input class="taxdata" id="taxDataNonTax"placeholder="Non-taxable allowances" type="number" ></div>
@@ -301,7 +304,7 @@
 
 <div data-role="header" data-position="fixed" id="homeHeaderBar">
   <!--<a href="#page3" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext" id="page3HeaderIconL" data-direction="reverse">back</a>-->
-  <h4 id="page4Title">PAYE Detail Calculation</h4>
+  <h4 id="page4Title">PAYE Detailed Calculation</h4>
   <div data-role="navbar">
       <ul>
        <li><a href="#home" data-icon="home" id="page4ToHomeBtn" data-direction="reverse">Home</a></li>
@@ -445,8 +448,8 @@
     <div class="grid1-item10-pg5 label2 finActAmend">Amendment of Section 29 of the principal Act (S.12 of the Finance Act)</div>
     <div class="grid1-item11-pg5 label2"><span>Basis for computing assessable profit</span><div>
      <ul class="grid1-ul-pg5">
-     The commencement and cessation rules are eliminated as assessments are generally on preceding year basis now.
-      <li>The 1st year under commencement shall be assessed from the date the company commenced to the end of its first accounting period (S.29(3a)</li><br>
+     The commencement and cessation rules are eliminated as assessments are generally on preceding year basis now.<br>
+      <li>The 1st year under commencement shall be assessed from the date the company commenced to the end of its first accounting period (S.29(3a))</li><br>
       <li>Second year shall be from the day after the 1st accounting period to the end of the second period etc.</li><br>
       <li>For cessation of business, the assessable profit in the year of cessation shall be the profit from the beginning of the accounting period to the date of cessation and the tax shall be payable within 6 months of cessation. </li><br>
     </div></div>
@@ -454,7 +457,7 @@
     <div class="grid1-item12-pg5 label2 finActAmend">Amendment of Section 29 of the principal Act (S.12 of the Finance Act)</div>
     <div class="grid1-item13-pg5 label2"><span>Minimum Tax</span><div>
      <ul class="grid1-ul-pg5">
-      the minimum tax to be levied and paid shall be 0.5% of gross turnover of the company, less franked investment income. (S.33(2a) <br> <br>
+      the minimum tax to be levied and paid shall be 0.5% of gross turnover of the company, less franked investment income. (S.33(2a)) <br> <br>
       <div class="grid1-pg5-subHead1">Exemptions</div>
       <li>(a) a company carrying on agricultural trade or business as defined in subsection (9) of section II, of this Act</li><br>
       <li>(b) a company that earns gross turnover of less than twenty-five million naira in the relevant year of assessment</li><br>
@@ -480,7 +483,7 @@
       <li>a. The taxpayer shall first write, with evidence of payment of the first instalment, and obtain the approval of the Service to pay in such number of instalments as may be approved by the Service.</li><br>
       <li>b. The final instalment must be paid on or before the due date of filing.</li><br>
       <p>Bonus</p>
-      <li>Where a company pays its tax 90 days before the due date as provided under Section 55 of this Act, such company shall be entitled to a bonus of – </li><br>
+      <li>Where a company pays its tax 90 days before the due date as provided under Section 55 of this Act, such company shall be entitled to a bonus of: </li><br>
       <li>(a) 2%, if such company is a medium-sized company; and </li><br>
       <li>(b)1% for any other company;  on the amount of tax paid, which shall be available as a credit against its future  taxes.</li><br>
     </div></div>
@@ -802,9 +805,9 @@
       <div class="grid1-item item6 colorbckgrdP8">CIT Rate [S 40(1)]</div>
       <div class="grid1-item item7 rLabelEnd colorbckgrdP8">Standard rate 30%</div>
       <div class="grid1-item item8">Small company tax rate [S 40(6)]</div>
-      <div class="grid1-item item9 rLabelEnd"><a href="#page7"> See the new Ammeded Finance Act 2019</a></div>
+      <div class="grid1-item item9 rLabelEnd"><a href="#page7"> See the new Finance Act 2019</a></div>
       <div class="grid1-item item10 colorbckgrdP8">Minimum tax [S 33(1),(2)]</div>
-      <div class="grid1-item item11 rLabelEnd colorbckgrdP8"><a href="#page7" id="pg7SettingsMinTax1a">0.5% of gross turnover of the company, less franked investment income<br><span id="pg7SettingsMinTax1b">(See the new Ammeded Finance Act 2019)</span> </a></div>
+      <div class="grid1-item item11 rLabelEnd colorbckgrdP8"><a href="#page7" id="pg7SettingsMinTax1a">0.5% of gross turnover of the company, less franked investment income<br><span id="pg7SettingsMinTax1b">(See the new Finance Act 2019)</span> </a></div>
       <div class="grid1-item item12" id="pg7SettingsMinTax1c">Exception from Minimum tax [S 33(3)]</div>
       <div class="grid1-item item13 rLabelEnd">
         <p>The new minimum tax rule is applicable to all companies, except those specifically exempt by the Act, namely:</p>
@@ -1047,7 +1050,7 @@
       <div class="grid1-item item9 mLableTop">Rates <br>[Schedule 6]</div>
       <div class="grid1-item item10 rLabelEnd">
         <p>Personal Income Tax (PIT) is a tax levied on individuals including employees, partners in a partnership, unincorporated trust, joint ventures, families and communities. It is  imposed based on source and  residency rules. </p>
-        <p>PIT rate is applied on a graduated scale and taxable income bands as set out below (See below table):</p>
+        <p>PIT rate is applied on a graduated scale and taxable income bands as set out below:</p>
         <div class="grid1-subCont-pg9">
           <div class="grid1-subCont item1 sub-header">Tax Band <br>(N)</div>
           <div class="grid1-subCont item2 sub-header">Rate<br>%</div>
@@ -1072,13 +1075,13 @@
     <div class="grid1-item item13 mLableMiddle">Reliefs Deductions [S 33, Schedule 6]</div>
     <div class="grid1-item item14 rLabelEnd">
       <ul>
-        <li>Consolidated relief allowance: Higher of N200,000 or 1% of gross income, plus 20% of gross income</li>
-        <li>Child allowance:  N2,500 for each child up to a maximum of four children, provided that one is above 16 years or married unless in a recognised school, under articleship or learning a trade.</li>
-        <li>Dependent relative:  N2,000 for each dependent relative up to a maximum of two who are widowed or infirmed or incapacitated by old age.</li>
-        <li>Deductions allowed: NHF contribution, National Health Insurance Scheme, Life  Assurance Premium, National Pension Scheme and Gratuities. </li>
-        <li>Reimbursements:  Expenses incurred in the performance of employment duties from which it is not intended that the  employee should make any gain or profit.</li>
-        <li>Interest and dividend: Interest earned from treasury bills, government and corporate bonds are exempt while  withholding tax at 10% is the final tax on other interests and dividend.</li>
-        <li>Interest on mortgage: Interest paid on mortgage loan for owner’s occupied property in any year is granted as a relief in the following year.</li>
+        <li><span>Consolidated relief allowance:</span> Higher of N200,000 or 1% of gross income, plus 20% of gross income</li>
+        <li><span>Child allowance:</span>  N2,500 for each child up to a maximum of four children, provided that one is above 16 years or married unless in a recognised school, under articleship or learning a trade.</li>
+        <li><span>Dependent relative:</span>  N2,000 for each dependent relative up to a maximum of two who are widowed or infirmed or incapacitated by old age.</li>
+        <li><span>Deductions allowed:</span> NHF contribution, National Health Insurance Scheme, Life  Assurance Premium, National Pension Scheme and Gratuities. </li>
+        <li><span>Reimbursements:</span>  Expenses incurred in the performance of employment duties from which it is not intended that the  employee should make any gain or profit.</li>
+        <li><span>Interest and dividend:</span> Interest earned from treasury bills, government and corporate bonds are exempt while  withholding tax at 10% is the final tax on other interests and dividend.</li>
+        <li><span>Interest on mortgage:</span> Interest paid on mortgage loan for owner’s occupied property in any year is granted as a relief in the following year.</li>
       </ul>
     </div>
 
@@ -1120,7 +1123,7 @@
         <p>All employers, including individuals, are required to register with the Nigeria Social Insurance Trust Fund (NSITF) and contribute to the scheme.</p>
         <p>Employee compensation scheme repeals the workmen's compsensation Act and provides compensation for employees for any death, injury, disease or disabiity arising from or in the course of employment.</p>
       </div>
-    <div class="grid1-item item32 mLableMiddle">Rate <br> [S33(1)42(1)] </div>
+    <div class="grid1-item item32 mLableMiddle">Rate <br> [S33(1)<br>42(1)] </div>
     <div class="grid1-item item33 rLabelEnd">
       <p>1% of total monthly payroll or amount assessed by the NSITF. Where the claim cost in respect of an employer exceeds 105% of the ordinary assessment of that employer, the NSITF Board may within 4 years levy a super assessment on the employer not exceeding 133% of the ordinary assessement for the year.</p>
     </div>

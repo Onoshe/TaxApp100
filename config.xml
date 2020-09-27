@@ -3,7 +3,7 @@
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     id          = "io.imfastTax.sundayadegboye"
     versionCode = "10"
-    version     = "1.0.3" >
+    version     = "1.0.4" >
 
 <!-- versionCode is optional and Android only -->
 
@@ -16,6 +16,7 @@
   <author href="https://sundayadegboye.imfast.io/" email="adesung2005@yahoo.co.uk">
       Sunday Adegboye
   </author>
+
   <!--<icon src="icon.png" />-->
   <!--<plugin name="cordova-plugin-splashscreen" source="npm" />-->
    <plugin name="cordova-plugin-splashscreen" spec="6.0.0" />
@@ -55,7 +56,10 @@
    <!-- This take care of all the https://.... -->
   <!--<allow-intent href="*"/>     Allow all unrecognized URLs to open installed apps -->
 
+
   <preference name="orientation" value="portrait"/>
   <preference name="SplashScreenDelay" value="5000" />
   <!--<plugin name="cordova-plugin-x-socialsharing" source="npm" />-->
+  <preference name="android-minSdkVersion" value="17"/><!--To solve the problem PnoneGap Build & Android 9(Pie): "this app was build for an older version of android". community.adobe.com -->
+  <preference name= "phonegap-version" value="cli-9.0.0"/>
 </widget>

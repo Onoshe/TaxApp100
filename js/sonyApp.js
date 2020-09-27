@@ -365,19 +365,26 @@ function fadingVerses(){setInterval(function(){
 };
 
 
-
 /*----- Responsive Page Definition -------*/
 function myFunction(x){
 	if (x.matches){
 		$('.taxResult').css("font-size", "10px");
 		$('.taxResultEffecTax').css("font-size", "14px");
-	}else{$('.taxResult').css("font-size", "14px")  }
+		$('.resultViewSpanHome').css("font-size", "12px");
+	}else{$('.taxResult').css("font-size", "14px"); 
+		$('.resultViewSpanHome').css("font-size", "14px");}
 }
 function myFunction2(x){
 	if (x.matches){
 		$('.taxDetails').css("font-size", "10px");
 	}else{$('.taxDetails').css("font-size", "14px")  }
 }
+function myFunction2b(x){
+	if (x.matches){
+		$('#grid3-Breakdown-Head').css("font-size", "12px");
+	}else{$('#grid3-Breakdown-Head').css("font-size", "14px")  }
+}
+
 function myFunction3(x){
 	if (x.matches){
 		$('.grid3-container >div > span').css("font-size", "10px");
@@ -389,16 +396,32 @@ function myFunction4(x){
 		$('.responsivePg8').css("font-weight", "bolder");
 	}else{$('.responsivePg8').css("font-size", "14px")  }
 }
+function myFunction5(x){
+	if (x.matches){
+		$('.navBtns-Home').css("font-size", "13px");
+	}else{$('.navBtns-Home').css("font-size", "16px")  }
+}
+function myFunction6(x){
+	if (x.matches){
+		$('.pitDetails > a').css("font-size", "12px");
+	}else{$('.pitDetails > a').css("font-size", "16px")  }
+}
 
 var x = window.matchMedia("(max-width: 400px)")
 myFunction(x)
 x.addListener(myFunction);
 myFunction2(x)
 x.addListener(myFunction2);
+myFunction2b(x)
+x.addListener(myFunction2b);
 myFunction3(x)
 x.addListener(myFunction3);
 myFunction4(x)
 x.addListener(myFunction4);
+myFunction5(x)
+x.addListener(myFunction5);
+myFunction6(x)
+x.addListener(myFunction6);
 
 /*
 grid3-container
@@ -415,12 +438,12 @@ function addCommas(x){
 	parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	return parts.join(".");
 }
-
+*/
 $(function(){
-	//var test = $('#contTest').css("margin");
-	$("#pg7SettingsMinTax1c").click(function(){
-	var x = $("#pg7SettingsMinTax1c").css("color");
+	//var test = $('.navBtns-Home').css("margin");
+	$(".pitDetails").click(function(){
+	var x = $(".pitDetails > a").css("font-size");
 	alert(x);
 	});
 });
-*/
+

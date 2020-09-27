@@ -42,7 +42,7 @@
 	height: 30px; padding: 10px; text-align: center; font-weight: bolder;}
 .nig-Tax-System-Div {background-color: #C2E3E3; border: 2px solid white; border-radius: 5px;
 padding: 10px; font-weight: bolder; text-align: center;}
-.nig-Tax-System-Span {color: red; text-align: center; font-weight: bolder;}
+.nig-Tax-System-Span {color: red; text-align: center; font-weight: bolder; font-style: italic; text-decoration: underline;}
 .nig-Tax-System-Home {box-shadow: 10px 10px 10px grey; background-image: linear-gradient(rgb(240, 203, 170), rgb(188, 247, 245),rgb(240, 203, 170)); 
 	text-align: justify; padding: 15px;}
 
@@ -772,7 +772,7 @@ padding-right: 2px;
 .pg7Settings2{border: 2px solid grey; border-radius: 10px; background-color: #C2E3E3; padding-left: 10px; padding-right: 10px;}
 .pg7Settings2 > p {font-weight: bolder;}
 .pg7Settings2 >div > p {font-weight: bolder;}
-#pg7homeBody > .sub-1 {background-color: lightsalmon; text-shadow: none;}
+#pg7homeBody > .sub-1 {background-color: rgba(0, 255, 0, 0.3); text-shadow: none;}
 #pg7SettingsID1, #pg7SettingsID2, #pg7SettingsID3, #pg7SettingsID4, #pg7SettingsID5, #pg7SettingsID6, #pg7SettingsID7, #pg7SettingsID8 {
 	padding-left: 10px; text-align: left; background-color: lightskyblue; border: 1px solid white; border-radius: 5px;}
 
@@ -1070,6 +1070,7 @@ padding-right: 2px;
 .grid1-container-pg9 > .mLableTop {border-top: 2px solid seagreen;}
 .grid1-container-pg9 > .rLabelTop {border-right: 2px solid seagreen; border-top: 2px solid seagreen; }
 .grid1-container-pg9 > .rLabelEnd {border-right: 2px solid seagreen; border-bottom: 2px solid seagreen;}
+.grid1-container-pg9 > .item14 > ul > li> span {font-weight: bold;}
 
 .grid1-container-pg9 .label1{
 	text-shadow: none;
