@@ -20,7 +20,7 @@
 
   <!--<icon src="icon.png" />-->
   <!--<plugin name="cordova-plugin-splashscreen" source="npm" />-->
-   <!--<preference name="phonegap-version" value="cli-9.0.0" />  Added. v1.05-->
+   <preference name="phonegap-version" value="cli-8.0.0" /> <!-- Added. v1.05-->
    <plugin name="cordova-plugin-splashscreen" spec="6.0.0" />
 
 
@@ -65,7 +65,7 @@
   <preference name="SplashScreenDelay" value="5000" />
   <!--<plugin name="cordova-plugin-x-socialsharing" source="npm" />-->
   <preference name="android-minSdkVersion" value="27" /> <!-- Added. v1.05-->
-  <!-- <preference name="android-maxSdkVersion" value="29" /> Added. v1.05-->
+  <preference name="android-maxSdkVersion" value="29" /> <!-- Added. v1.05-->
   <preference name="android-targetSdkVersion" value="28" />
   <!--<preference name="android-minSdkVersion" value="17"/>To solve the problem PnoneGap Build & Android 9(Pie): "this app was build for an older version of android". community.adobe.com -->
   <!--<preference name= "phonegap-version" value="cli-9.0.0"/>-->
