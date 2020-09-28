@@ -44,20 +44,20 @@
   <!-- <access origin="*" /> Added. v1.05-->
   <allow-navigation href="tel:+2348064205333"/>
   <allow-navigation href="sms:*"/>
-  <allow-navigation href="mailto:adesung2005@yahoo.co.uk/*"/>
-  <allow-navigation href="https://api.whatsapp.com/send?phone=2348064205333/*"/>
-  <allow-navigation href="https://www.linkedin.com/in/sunday-adegboye-aca-046644a62/*"/>
-  <allow-navigation href="https://www.twitter.com/adesung2005/*"/>
-  <allow-navigation href="https://www.facebook.com/Sunny.adesung/*"/>
+  <allow-navigation href="mailto:adesung2005@yahoo.co.uk"/>
+  <allow-navigation href="https://api.whatsapp.com/send?phone=2348064205333"/>
+  <allow-navigation href="https://www.linkedin.com/in/sunday-adegboye-aca-046644a62"/>
+  <allow-navigation href="https://www.twitter.com/adesung2005"/>
+  <allow-navigation href="https://www.facebook.com/Sunny.adesung"/>
 
 
   <allow-intent href="tel:*"/>
   <allow-intent href="sms:*"/>
-  <allow-intent href="mailto:adesung2005@yahoo.co.uk/*"/>
-  <allow-intent href="https://api.whatsapp.com/send?phone=2348064205333/*"/>
+  <allow-intent href="mailto:adesung2005@yahoo.co.uk"/>
+  <allow-intent href="https://api.whatsapp.com/send?phone=2348064205333"/>
   <allow-intent href="https://www.linkedin.com/in/sunday-adegboye-aca-046644a62"/>
-  <allow-intent href="https://www.twitter.com/adesung2005/*"/>
-  <allow-intent href="https://www.facebook.com/Sunny.adesung/*"/>
+  <allow-intent href="https://www.twitter.com/adesung2005"/>
+  <allow-intent href="https://www.facebook.com/Sunny.adesung"/>
    <!-- This take care of all the https://.... -->
   <!--<allow-intent href="*"/>     Allow all unrecognized URLs to open installed apps -->
 
