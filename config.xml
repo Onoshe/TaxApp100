@@ -20,7 +20,7 @@
 
   <!--<icon src="icon.png" />-->
   <!--<plugin name="cordova-plugin-splashscreen" source="npm" />-->
-   <preference name="phonegap-version" value="cli-9.0.0" /> <!-- Added. v1.05-->
+   <!--<preference name="phonegap-version" value="cli-9.0.0" />  Added. v1.05-->
    <plugin name="cordova-plugin-splashscreen" spec="6.0.0" />
 
 
