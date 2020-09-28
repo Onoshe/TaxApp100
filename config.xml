@@ -3,12 +3,13 @@
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     id          = "io.imfastTax.sundayadegboye"
     versionCode = "10"
-    version     = "1.0.4" >
+    version     = "1.0.5" >
 
 <!-- versionCode is optional and Android only -->
 
   <name>Nig Tax Pad</name>
 
+  <plugin name="cordova-plugin-whitelist" spec="1" /> <!-- From stackoverflow.com Phonegap Build config.xml and geolocation--> <!-- Added. v1.05-->
   <description>
       The Nigerian Tax Pad (Nig Tax Pad) is a portable summary of some of the major tax laws in Nigeria. It contains summary of Nigeria Taxes and Rates, PAYE Tax Calcuator and a review of the Finance Act 2019.
   </description>
@@ -37,6 +38,8 @@
     <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/icon/android/screen-xhdpi-portrait.png" />
     <splash src="splash.png" />
 <!-- from uncutacademy.com -->
+  
+  <access origin="*" /> <!-- Added. v1.05-->
   <allow-navigation href="tel:+2348064205333"/>
   <allow-navigation href="sms:*"/>
   <allow-navigation href="mailto:adesung2005@yahoo.co.uk/*"/>
@@ -56,10 +59,12 @@
    <!-- This take care of all the https://.... -->
   <!--<allow-intent href="*"/>     Allow all unrecognized URLs to open installed apps -->
 
-
+  <preference name="phonegap-version" value="cli-9.0.0" /> <!-- Added. v1.05-->
   <preference name="orientation" value="portrait"/>
   <preference name="SplashScreenDelay" value="5000" />
   <!--<plugin name="cordova-plugin-x-socialsharing" source="npm" />-->
+  <preference name="android-minSdkVersion" value="27" /> <!-- Added. v1.05-->
+  <preference name="android-maxSdkVersion" value="29" /> <!-- Added. v1.05-->
   <preference name="android-targetSdkVersion" value="28" />
   <!--<preference name="android-minSdkVersion" value="17"/>To solve the problem PnoneGap Build & Android 9(Pie): "this app was build for an older version of android". community.adobe.com -->
   <!--<preference name= "phonegap-version" value="cli-9.0.0"/>-->
