@@ -9,7 +9,8 @@
 
   <name>Nig Tax Pad</name>
 
-  <plugin name="cordova-plugin-whitelist" spec="1" /> <!-- From stackoverflow.com Phonegap Build config.xml and geolocation--> <!-- Added. v1.05-->
+  <!-- <plugin name="cordova-plugin-whitelist" spec="1" /> From stackoverflow.com Phonegap Build config.xml and geolocation--> <!-- Added. v1.05-->
+  <plugin name="cordova-plugin-whitelist" spec="1.3.4" /> <!-- Recommeded by Phonegap build -->
   <description>
       The Nigerian Tax Pad (Nig Tax Pad) is a portable summary of some of the major tax laws in Nigeria. It contains summary of Nigeria Taxes and Rates, PAYE Tax Calcuator and a review of the Finance Act 2019.
   </description>
