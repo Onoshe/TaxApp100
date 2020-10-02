@@ -365,13 +365,33 @@ padding-right: 2px;
 	font-weight: bold;
 }
 
-.grid3-container > div >span{
+.grid3-Cont-S1{
 	color: blue;
 	text-shadow: none;
 	text-align: left;
 	padding-left: 10px;
 	font-size: 14px;
 }
+
+.grid3-Cont-S2{
+	color: blue;
+	text-shadow: none;
+	text-align: left;
+	padding-left: 10px;
+	font-size: 14px;
+}
+.grid3-Cont-S3{
+	color: green;
+	text-shadow: none;
+	text-align: left;
+	padding-left: 10px;
+	padding-top: 10px;
+	font-size: 14px;
+}
+
+.txblIncome-TD{color: green;}
+.txPayable-TD{color: red;}
+
 .grid3-container .label2{
 	line-height: 5px;
 	text-align: left;
@@ -392,16 +412,18 @@ padding-right: 2px;
 .grid3-item6{grid-column: 1/span 3; grid-row: 3; }
 .grid3-item7{grid-column: 4/span 3; grid-row: 3; }
 .grid3-item8{grid-column: 1/span 3; grid-row: 4; }
-.grid3-item9{grid-column: 4/span 2; grid-row: 4; }
+.grid3-item9{grid-column: 4/span 3; grid-row: 4; }
+.grid3-item10{grid-column: 1/span 3; grid-row: 5; }
+.grid3-item11{grid-column: 4/span 3; grid-row: 5; }
 
-.grid3-item10{grid-column: 1/span 6; grid-row: 5;}
+.grid3-item12{grid-column: 1/span 6; grid-row: 6;}
 
-.grid3-item11{grid-column: 1/span 3; grid-row: 6; }
-.grid3-item12{grid-column: 4/span 3; grid-row:6; }
 .grid3-item13{grid-column: 1/span 3; grid-row: 7; }
-.grid3-item14{grid-column: 4/span 3; grid-row: 7; }
+.grid3-item14{grid-column: 4/span 3; grid-row:7; }
 .grid3-item15{grid-column: 1/span 3; grid-row: 8; }
 .grid3-item16{grid-column: 4/span 3; grid-row: 8; }
+.grid3-item17{grid-column: 1/span 3; grid-row: 9; }
+.grid3-item18{grid-column: 4/span 3; grid-row: 9; }
 
 #grid3-item9{background-color: lime; border-radius: 10px;}
 
@@ -471,8 +493,8 @@ padding-right: 2px;
 
 #page4Title{margin-left: 2px; margin-right: 2px}
 .pageTitleHead{ text-align: center;}
-.taxDetailsSet1{background-color: rgba(242, 182, 121, 0.7); border-radius: 10px;}
-
+/*.taxDetailsSet1{background-color: rgba(242, 182, 121, 0.7); border-radius: 10px;}*/
+.taxDetailsSet1{background-color: silver; border-radius: 10px;}
 
 /*------ Page 5 ---------*/
 #grid1-Deduction-Head{
@@ -1214,4 +1236,9 @@ padding-right: 2px;
     margin-left: 2px;
     margin-right: 2px;
     border-radius: 15px;}
+}
+
+@media only screen and (max-width: 400px){
+.grid3-Cont-S3 {
+   font-size: 12px;}
 }

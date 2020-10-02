@@ -3,7 +3,7 @@
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     id          = "io.imfastTax.sundayadegboye"
     versionCode = "10"
-    version     = "1.0.61" >
+    version     = "1.0.7" >
 
 <!-- versionCode is optional and Android only -->
 
@@ -42,10 +42,6 @@
 <!-- from uncutacademy.com -->
   
   <!-- <access origin="*" /> Added. v1.05-->
-  <allow-intent href="tel:*"/>
-  <allow-intent href="sms:*"/>
-  <allow-intent href="mailto:*"/>
-  <allow-navigation href="https://*/*" />
   <!--
   <allow-navigation href="tel:+2348064205333"/>
   <allow-navigation href="sms:*"/>
@@ -54,27 +50,24 @@
   <allow-navigation href="https://www.linkedin.com/in/sunday-adegboye-aca-046644a62"/>
   <allow-navigation href="https://www.twitter.com/adesung2005"/>
   <allow-navigation href="https://www.facebook.com/Sunny.adesung"/>
-
-
-  <allow-intent href="tel:*"/>
-  <allow-intent href="sms:*"/>
-  <allow-intent href="mailto:adesung2005@yahoo.co.uk"/>
-  <allow-intent href="https://api.whatsapp.com/send?phone=2348064205333"/>
-  <allow-intent href="https://www.linkedin.com/in/sunday-adegboye-aca-046644a62"/>
-  <allow-intent href="https://www.twitter.com/adesung2005"/>
-  
-  <allow-intent href="https://www.facebook.com/Sunny.adesung"/>
   -->
    <!-- This take care of all the https://.... -->
-  <!--<allow-intent href="*"/>     Allow all unrecognized URLs to open installed apps -->
+  <!--<allow-intent href="*"/>     Allow all unrecognized URLs to open installed apps 
+-->
 
  
   <preference name="orientation" value="portrait"/>
   <preference name="SplashScreenDelay" value="5000" />
+   <preference name="android-targetSdkVersion" value="28" /> 
   <!--<plugin name="cordova-plugin-x-socialsharing" source="npm" />-->
   <!-- <preference name="android-minSdkVersion" value="27" /> Added. v1.05-->
   <!-- <preference name="android-maxSdkVersion" value="29" /> Added. v1.05-->
   <!-- <preference name="android-targetSdkVersion" value="28" />Added. v1.05-->
   <!--<preference name="android-minSdkVersion" value="17"/>To solve the problem PnoneGap Build & Android 9(Pie): "this app was build for an older version of android". community.adobe.com -->
   <!--<preference name= "phonegap-version" value="cli-9.0.0"/>-->
+  <allow-intent href="tel:*"/>
+  <allow-intent href="sms:*"/>
+  <allow-intent href="mailto:*"/>
+  <allow-navigation href="https://*/*" />
+
 </widget>

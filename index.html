@@ -335,24 +335,28 @@
   <hr>
   <button class="textview" id="pg4textview">
   <div class="grid3-container">
-    <div class="grid3-item2 label2" ><span>Gross Income</span><div class="taxDetails" id="tDGross" type="submit">00.00</div></div>
-    <div class="grid3-item3 label2"><span>Non-taxable Income</span><div class="taxDetails" id="tDTaxable" type="submit">00.00</div></div>
-    <div class="grid3-item4 label2"><span>Total deductions</span><div class="taxDetails" id="tDNonTaxable" type="submit">00.00</div></div>
-    <div class="grid3-item5 label2" ><span>Consolidated Reliefs</span><div class="taxDetails" id="tDConsol" type="submit">00.00</div></div>
-    <div class="grid3-item6 label2"><span>Total deductions & Reliefs</span><div class="taxDetails" id="tDNext600" type="submit">00.00</div></div>
-    <div class="grid3-item7 label2" id="grid3-item7"><span>Taxable Income</span><div class="taxDetails" id="tDMinTax" type="submit">00.00</div></div>
+    <div class="grid3-item2 label2" ><span class="grid3-Cont-S1">Gross Income</span><div class="taxDetails" id="tDGross" type="submit">00.00</div></div>
+    <div class="grid3-item3 label2"><span class="grid3-Cont-S1">Non-taxable Income</span><div class="taxDetails" id="tDTaxable" type="submit">00.00</div></div>
+    
+    <div class="grid3-item4 label2" ><span class="grid3-Cont-S1">Pension deduction</span><div class="taxDetails" id="tDPenChr" type="submit">00.00</div></div>
+    <div class="grid3-item5 label2"><span class="grid3-Cont-S1">NHF deduction</span><div class="taxDetails" id="tDNHFChr" type="submit">00.00</div></div>
 
-     <div class="grid3-item8 label2 taxDetailsSet1"><span>Tax Payable</span><div class="taxDetails" id="tDNext600" type="submit">00.00</div></div>
-    <div class="grid3-item9 label2" id="grid3-item9"><span>Minimum Tax</span><div class="taxDetails" id="tDMinTax" type="submit">00.00</div></div>
+    <div class="grid3-item6 label2"><span class="grid3-Cont-S1">Total deductions</span><div class="taxDetails" id="tDNonTaxable" type="submit">00.00</div></div>
+    <div class="grid3-item7 label2" ><span class="grid3-Cont-S1">Consolidated Reliefs</span><div class="taxDetails" id="tDConsol" type="submit">00.00</div></div>
+    <div class="grid3-item8 label2"><span class="grid3-Cont-S1">Total deductions & Reliefs</span><div class="taxDetails" id="tDNext600" type="submit">00.00</div></div>
+    <div class="grid3-item9 label2" id="grid3-item7"><span class="grid3-Cont-S1">Taxable Income</span><div class="taxDetails txblIncome-TD" id="tDMinTax" type="submit">00.00</div></div>
 
-    <div class="grid3-item10 label1 taxDetailsSet1" id="grid3-Breakdown-Head">Breakdown of Tax Payable:</div>
-    <div class="grid3-item11 label2" ><span>First $300,000</span><div class="taxDetails" id="tD300" type="submit">00.00</div></div>
-    <div class="grid3-item12 label2"><span>Next $300,000</span><div class="taxDetails" id="tD600" type="submit">00.00</div></div>
-    <div class="grid3-item13 label2"><span>Next $500,000</span><div class="taxDetails" id="tD1100" type="submit">00.00</div></div>
+     <div class="grid3-item10 label2 taxDetailsSet1"><span class="grid3-Cont-S1">Tax Payable</span><div class="taxDetails txPayable-TD" id="tDNext600" type="submit">00.00</div></div>
+    <div class="grid3-item11 label2" id="grid3-item9"><span class="grid3-Cont-S1">Minimum Tax</span><div class="taxDetails" id="tDMinTax" type="submit">00.00</div></div>
 
-    <div class="grid3-item14 label2" ><span>Next $500,000</span><div class="taxDetails" id="tD1600" type="submit" >00.00</div></div>
-    <div class="grid3-item15 label2" ><span>Next $1,600,000</span><div class="taxDetails" id="tD3200" type="submit" >00.00</div></div>
-    <div class="grid3-item16 label2"><span id="taxResultTaxDueSpan">Above $3,200,000</span><div class="taxDetails" id="tDOver3200" type="submit">00.00</div></div>
+    <div class="grid3-item12 label1 taxDetailsSet1" id="grid3-Breakdown-Head">Breakdown of Tax Payable:</div>
+    <div class="grid3-item13 label2" ><span class="grid3-Cont-S2">First $300,000</span><br><div class="grid3-Cont-S3">00.00</div><div class="taxDetails txPayable-TD" id="tD300" type="submit">00.00</div></div>
+    <div class="grid3-item14 label2"><span class="grid3-Cont-S2">Next $300,000</span><br><div class="grid3-Cont-S3">00.00</div><div class="taxDetails txPayable-TD" id="tD600" type="submit">00.00</div></div>
+    <div class="grid3-item15 label2"><span class="grid3-Cont-S2">Next $500,000</span><br><div class="grid3-Cont-S3">00.00</div><div class="taxDetails txPayable-TD" id="tD1100" type="submit">00.00</div></div>
+
+    <div class="grid3-item16 label2" ><span class="grid3-Cont-S2">Next $500,000</span><br><div class="grid3-Cont-S3">00.00</div><div class="taxDetails txPayable-TD" id="tD1600" type="submit" >00.00</div></div>
+    <div class="grid3-item17 label2" ><span class="grid3-Cont-S2">Next $1,600,000</span><br><div class="grid3-Cont-S3">00.00</div><div class="taxDetails txPayable-TD" id="tD3200" type="submit" >00.00</div></div>
+    <div class="grid3-item18 label2"><span id="taxResultTaxDueSpan" class="grid3-Cont-S2">Above $3,200,000</span><br><div class="grid3-Cont-S3">00.00</div><div class="taxDetails txPayable-TD" id="tDOver3200" type="submit">00.00</div></div>
   </div>
   </button>
   <br>
@@ -797,8 +801,10 @@
         <a href="#page9" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all" id="pg7SettingsID8">14. Custom and Excise Duties</a>
     </div>
 
-    <a href="https://www.firs.gov.ng/SiteApplication/Home/Home.aspx" class="ui-btn ui-icon-cloud ui-btn-icon-top ui-corner-all" id="firsOnlinePg8">For details: Visit FIRS online</a>
+    <!--<a href="https://www.firs.gov.ng/SiteApplication/Home/Home.aspx" class="ui-btn ui-icon-cloud ui-btn-icon-top ui-corner-all" id="firsOnlinePg8">For details: Visit FIRS online</a>-->
 
+    <hr>
+     <br>
     <div class="grid1-container-pg8"><!-- ---grid1-container-pg8 ---->
       <div class="grid1-item item1 lLabelPry taxSumANDSch" id="taxSchCIT">1. COMPANY INCOME TAX (CIT)</div>
       <div class="grid1-item item2 mLableTop colorbckgrdP8">Relevant Law</div>
@@ -1177,6 +1183,35 @@
   </div>
 </div><!-- /footer -->
 </div><!-- /page9 -->
+
+<!-- Start of page10. Page10
+<div data-role="page" id="page10">
+
+<div data-role="header" data-position="fixed" id="homeHeaderBar">
+  <div data-role="navbar">
+      <ul>
+       <li><a  id="myHome" href="#home" data-icon="home">Home</a></li>
+       <li><a href="#add" data-icon="plus" id="page2Btn">PIT Cal</a></li>
+        <li><a href="#page3" data-icon="plus" id="page3Btn">Page3</a></li>
+      </ul>    
+  </div>
+</div>
+
+<div role="main" class="ui-content" id="homeBody">
+  
+ <h1>PDF Example with iframe</h1>
+ <div class="contpg10" style="padding: 30px;">
+     <object data="res/testFile.pdf" type="application/pdf" width="auto" height="auto"></object>
+  </div>
+  
+<hr>
+</div>
+ 
+<div data-role="footer" data-position="fixed" id="homeFooterBar">
+  <h4>Hello</h4>
+</div>
+</div>-->
+
 
 </body>
 </html>
