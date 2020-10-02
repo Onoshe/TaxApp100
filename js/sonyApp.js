@@ -407,7 +407,9 @@ function myFunction(x){
 function myFunction2(x){
 	if (x.matches){
 		$('.taxDetails').css("font-size", "10px");
-	}else{$('.taxDetails').css("font-size", "14px")  }
+		$('.grid3-Cont-S3').css("font-size", "10px");
+	}else{$('.taxDetails').css("font-size", "14px");
+		 $('.grid3-Cont-S3').css("font-size", "14px"); }
 }
 function myFunction2b(x){
 	if (x.matches){
@@ -471,8 +473,8 @@ function addCommas(x){
 
 $(function(){
 	//var test = $('.navBtns-Home').css("margin");
-	$(".pitDetails").click(function(){
-	var x = $(".pitDetails > a").css("font-size");
+	$(".grid3-Cont-S3").click(function(){
+	var x = $(".grid3-Cont-S3").css("font-size");
 	alert(x);
 	});
 });
