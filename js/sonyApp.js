@@ -379,7 +379,7 @@ $(function(){
 	$('#viewTaxDetails').click(function(){
 		var grossPay = $('#taxResultGross').text();
 		//grossPay = grossPay+"";
-		if(grossPay == '00.00'){alert("Compute to view details")
+		if(grossPay == '00.00'){alert("No details to display!")
 		}else{location.replace("#page4")};
 	});
 });
