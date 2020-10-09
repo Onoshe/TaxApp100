@@ -13,6 +13,7 @@ var  tax_result = document.getElementsByClassName("taxResult");
 var  tax_Details = document.getElementsByClassName("taxDetails");
 var tax_Data = document.getElementsByClassName("taxdata");
 var tax_Band = document.getElementsByClassName("grid3-Cont-S3");
+var  tax_Details_1 = document.getElementsByClassName("taxDetails_1");
 //var tax_ResultCheck = document.getElementById("taxResultCheck");
 
 $(function(){
@@ -88,7 +89,8 @@ $(function(){
 	//returned tax_Result is [tgrossPay, taxableIncome, netPay,  penChr, nHFChr, taxPayable, minTax];
 	//returned tax_Result is = [0.tgrossPayAnnual, 1.taxableIncomeAnnual, 2.netPayAnnual,  3.penChrAnnual, 4.nHFChrAnnual, 5.taxPayableAnnual, 6.minTaxAnnual, + 
 			//7.fConsolRf, 8.first300, 9.next600, 10.next1100, 11.next1600, 12.next3200, 13.over3200, 14.tgrossPayAnnual, 15.taxableIncomeAnnual, 16.nonTaxable, + 
-			// 17.minTaxAnnual, 18.taxPayableAnnual, 19.aEffectTax, 20.aDeductAllw, 21.aDeductAndRelief, 22.afirstTxbl300, 23.anextTxbl600, 24.anextTxbl1100, 25.anextTxbl1600, 26.anextTxbl3200, 27.aoverTxbl3200];
+			// 17.minTaxAnnual, 18.taxPayableAnnual, 19.aEffectTax, 20.aDeductAllw, 21.aDeductAndRelief, 22.afirstTxbl300, 23.anextTxbl600, 24.anextTxbl1100, 25.anextTxbl1600, + 
+			// 26.anextTxbl3200, 27.aoverTxbl3200, 28.aEarnedIncome, 29.aNetPay];
 	//tax_ResultCheck.innerHTML = tax_Result;
 	//alert(tax_Result);
 	$('#taxResultCheck').text(tax_Result);
@@ -102,8 +104,11 @@ $(function(){
 	tax_result[6].innerHTML = tax_Result[19]+'%';
 
 	//Tax Details
+	tax_Details_1[0].innerHTML = tax_Result[28]; //Earned Income
+	tax_Details_1[1].innerHTML = tax_Result[16]; //Unearned Income
+
 	tax_Details[0].innerHTML = tax_Result[14];
-	tax_Details[1].innerHTML = tax_Result[16];
+	tax_Details[1].innerHTML = tax_Result[29]; //aNetPay
 	tax_Details[2].innerHTML = tax_Result[3];
 	tax_Details[3].innerHTML = tax_Result[4];
 
@@ -282,7 +287,7 @@ if(first300 < 0){afirst300 = '0.00'}
 	else{afirst300 = first300.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}; 
 
 //Annual Result
-var effectTax, aEffectTax, deductAllw, aDeductAllw, deductAndRelief, aDeductAndRelief;
+var effectTax, aEffectTax, deductAllw, aDeductAllw, deductAndRelief, aDeductAndRelief, aEarnedIncome, aUnearnedIncome, aNetPay;
 effectTax = (taxPayable/grossPay) *100;
 tgrossPay = grossPay + nonTaxable;
 netPay = tgrossPay - penChr - nHFChr - taxPayable;
@@ -291,6 +296,8 @@ nHFChr = nHFChr;
 taxableIncome = taxableIncome;
 deductAllw = penChr + nHFChr;
 deductAndRelief = fConsolRF + deductAllw;
+aEarnedIncome = grossPay;
+aNetPay = netPay;
 
 var afirstTxbl300, anextTxbl600, anextTxbl1100, anextTxbl1600, anextTxbl3200, aoverTxbl3200;
 if(firstTxbl300 < 0){afirstTxbl300 = '0.00'}
@@ -313,11 +320,14 @@ fConsolRF = fConsolRF.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 aEffectTax = effectTax.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 aDeductAllw = deductAllw.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 aDeductAndRelief = deductAndRelief.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+nonTaxable = nonTaxable.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+aEarnedIncome = aEarnedIncome.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+aNetPay = aNetPay.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 //Negative Taxable Income should be Nil
 if(taxableIncome < 0){taxableIncomeAnnual = 'Nil'}
 	else{taxableIncomeAnnual = taxableIncome.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')};
 
-annualFResult = [tgrossPayAnnual, taxableIncomeAnnual, netPayAnnual,  penChrAnnual, nHFChrAnnual, taxPayableAnnual, minTaxAnnual, fConsolRF, afirst300, anext600, anext1100, anext1600, anext3200, aover3200, tgrossPayAnnual, taxableIncomeAnnual, nonTaxable, minTaxAnnual, taxPayableAnnual, aEffectTax, aDeductAllw, aDeductAndRelief, afirstTxbl300, anextTxbl600, anextTxbl1100, anextTxbl1600, anextTxbl3200, aoverTxbl3200];
+annualFResult = [tgrossPayAnnual, taxableIncomeAnnual, netPayAnnual,  penChrAnnual, nHFChrAnnual, taxPayableAnnual, minTaxAnnual, fConsolRF, afirst300, anext600, anext1100, anext1600, anext3200, aover3200, tgrossPayAnnual, taxableIncomeAnnual, nonTaxable, minTaxAnnual, taxPayableAnnual, aEffectTax, aDeductAllw, aDeductAndRelief, afirstTxbl300, anextTxbl600, anextTxbl1100, anextTxbl1600, anextTxbl3200, aoverTxbl3200, aEarnedIncome, aNetPay];
 //Minimum Tax format
 if(taxPayableAnnual === minTaxAnnual){
 	//alert('Minimumtax');
@@ -357,13 +367,23 @@ if(montaxableIncome < 0){montaxableIncome = 'Nil'}
 
 
 //annualFResult = [tgrossPayAnnual, taxableIncomeAnnual, netPayAnnual,  penChrAnnual, nHFChrAnnual, taxPayableAnnual, minTaxAnnual, consolRf, first300, next600, next1100, next1600, next3200, over3200, tgrossPayAnnual, taxableIncomeAnnual, nonTaxable, minTaxAnnual, taxPayableAnnual];
-monthFResult = [monGross, montaxableIncome, monNet, monPen, monNHF, monTax,  minTax, fConsolRF, afirst300, anext600, anext1100, anext1600, anext3200, aover3200, tgrossPayAnnual, taxableIncomeAnnual, nonTaxable, minTaxAnnual, taxPayableAnnual, fmEffectTax, aDeductAllw, aDeductAndRelief, afirstTxbl300, anextTxbl600, anextTxbl1100, anextTxbl1600, anextTxbl3200, aoverTxbl3200];
+monthFResult = [monGross, montaxableIncome, monNet, monPen, monNHF, monTax,  minTax, fConsolRF, afirst300, anext600, anext1100, anext1600, anext3200, aover3200, tgrossPayAnnual, taxableIncomeAnnual, nonTaxable, minTaxAnnual, taxPayableAnnual, fmEffectTax, aDeductAllw, aDeductAndRelief, afirstTxbl300, anextTxbl600, anextTxbl1100, anextTxbl1600, anextTxbl3200, aoverTxbl3200, aEarnedIncome, aNetPay];
 
 if(annualResult ==="Yes"){
 	return annualFResult}
 else{return monthFResult}
 
 }
+//View Tax Details Function:
+$(function(){
+	$('#viewTaxDetails').click(function(){
+		var grossPay = $('#taxResultGross').text();
+		//grossPay = grossPay+"";
+		if(grossPay == '00.00'){alert("Compute to view details")
+		}else{location.replace("#page4")};
+	});
+});
+
 
 $(function(){
 	var test = $('#contTest').css("margin");
@@ -407,8 +427,10 @@ function myFunction(x){
 function myFunction2(x){
 	if (x.matches){
 		$('.taxDetails').css("font-size", "10px");
+		$('.taxDetails_1').css("font-size", "10px");
 		$('.grid3-Cont-S3').css("font-size", "10px");
 	}else{$('.taxDetails').css("font-size", "14px");
+		 $('.taxDetails_1').css("font-size", "14px");
 		 $('.grid3-Cont-S3').css("font-size", "14px"); }
 }
 function myFunction2b(x){
@@ -473,8 +495,10 @@ function addCommas(x){
 
 $(function(){
 	//var test = $('.navBtns-Home').css("margin");
-	$(".grid3-Cont-S3").click(function(){
-	var x = $(".grid3-Cont-S3").css("font-size");
+	$("#viewTaxDetails").click(function(){
+	//var x = $(".grid3-Cont-S3").css("font-size");
+	//var x = typeof($("#taxResultGross"))
+	var x = $("#taxResultGross").text();
 	alert(x);
 	});
 });

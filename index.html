@@ -254,7 +254,7 @@
       <span class="checkmark"></span>
     </label>
   </div>
-  <a href="#page4" class="ui-btn ui-icon-eye ui-btn-icon-left" id="pg4ShowDetails">View Annual PIT Details</a>
+  <a href="#" id="viewTaxDetails" class="ui-btn ui-icon-eye ui-btn-icon-left" id="pg4ShowDetails">View Annual PIT Details</a>
   <hr>
   <!--- /Monthly/ Annual Result Selection ---->
      <!-- Custom Radio Buttons 2----->
@@ -271,13 +271,13 @@
   </div>
 
 <div class="grid2-container">
-    <div class="grid2-item1 label1">Enter your taxable allowances:</div>
+    <div class="grid2-item1 label1">Enter your Earned Income:</div>
   	<div class="grid2-item2 label2" ><span>Basic</span><input class="taxdata" id="taxDataBasic" placeholder="Basic allowances" type="number"></div>
     <div class="grid2-item3 label2"><span>House</span><input class="taxdata" id="taxDataHouse"placeholder="House allowances" type="number" ></div>
     <div class="grid2-item4 label2"><span>Transport</span><input class="taxdata" id="taxDataTran" placeholder="Transport allowances" type="number"></div>
 
     <div class="grid2-item5 label3" ><span>Others</span><input class="taxdata" id="taxDataOthers" placeholder="Other taxable allowances" type="number"></div>
-    <div class="grid2-item6 label3"><span>Non-taxable allowance</span><input class="taxdata" id="taxDataNonTax"placeholder="Non-taxable allowances" type="number" ></div>
+    <div class="grid2-item6 label3"><span>Unearned Income</span><input class="taxdata" id="taxDataNonTax"placeholder="e.g: Rent, Fees, Dividend, etc" type="number" ></div>
 </div>
   <!---- Custom Checkboxes ---->
 <div id="cBoxContainer">
@@ -335,8 +335,11 @@
   <hr>
   <button class="textview" id="pg4textview">
   <div class="grid3-container">
+    <div class="grid3-item1a label2" ><span class="grid3-Cont-S1">Earned Income</span><div class="taxDetails_1" id="tEarned" type="submit">00.00</div></div>
+    <div class="grid3-item1b label2"><span class="grid3-Cont-S1">Unearned Income</span><div class="taxDetails_1" id="tUnearned" type="submit">00.00</div></div>  
+
     <div class="grid3-item2 label2" ><span class="grid3-Cont-S1">Gross Income</span><div class="taxDetails" id="tDGross" type="submit">00.00</div></div>
-    <div class="grid3-item3 label2"><span class="grid3-Cont-S1">Non-taxable Income</span><div class="taxDetails" id="tDTaxable" type="submit">00.00</div></div>
+    <div class="grid3-item3 label2"><span class="grid3-Cont-S1">Net Income</span><div class="taxDetails" id="tDTaxable" type="submit">00.00</div></div>
     
     <div class="grid3-item4 label2" ><span class="grid3-Cont-S1">Pension deduction</span><div class="taxDetails" id="tDPenChr" type="submit">00.00</div></div>
     <div class="grid3-item5 label2"><span class="grid3-Cont-S1">NHF deduction</span><div class="taxDetails" id="tDNHFChr" type="submit">00.00</div></div>
