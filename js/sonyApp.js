@@ -16,29 +16,156 @@ var tax_Band = document.getElementsByClassName("grid3-Cont-S3");
 var  tax_Details_1 = document.getElementsByClassName("taxDetails_1");
 //var tax_ResultCheck = document.getElementById("taxResultCheck");
 
+
+// -----Compute Tax ---------//
+/*
+$(function(){
+	$('#taxDataBasic, #taxDataHouse, #taxDataTran, #taxDataOthers, #taxDataNonTax').keypress(function(event){
+		var presKey = event.which || event.keyCode;
+		if(presKey == '13' || presKey == 'Enter'){
+			computeTaxFunction();
+		}
+	});
+});
+*/
 $(function(){
 	$('#computeTax').click(function(){
-	var bAllw = parseInt(tax_Data[0].value);
+		computeTaxFunction();
+	});
+});	
+
+//------- Format Input figures---------/
+var bAllwOrig =0;
+var hAllwOrig =0;
+var tAllwOrig =0;
+var oAllwOrig =0;
+var nAllwOrig =0; 
+
+$(function(){
+	$('#taxDataBasic').blur(function(){
+		$('#taxDataBasic').attr('type', 'text');
+		bAllwOrig = parseFloat($('#taxDataBasic').val());
+
+		var bAllwFig = $('#taxDataBasic').val();
+		var bAllwFmt = new Number(bAllwFig);
+
+		var bAllwFmtFinal = bAllwFmt.toLocaleString('en-US');
+		$('#taxDataBasic').val(bAllwFmtFinal);
+		computeTaxFunction();
+	});
+});
+$(function(){
+	$('#taxDataBasic').focus(function(){
+		$('#taxDataBasic').attr('type', 'number');
+		$('#taxDataBasic').val(bAllwOrig);
+	});
+});
+$(function(){
+	$('#taxDataHouse').blur(function(){
+		$('#taxDataHouse').attr('type', 'text');
+		hAllwOrig = parseFloat($('#taxDataHouse').val());
+
+		var hAllwFig = $('#taxDataHouse').val();
+		var hAllwFmt = new Number(hAllwFig);
+
+		var hAllwFmtFinal = hAllwFmt.toLocaleString('en-US');
+		$('#taxDataHouse').val(hAllwFmtFinal);
+		computeTaxFunction();
+	});
+});
+$(function(){
+	$('#taxDataHouse').focus(function(){
+		$('#taxDataHouse').attr('type', 'number');
+		$('#taxDataHouse').val(hAllwOrig);
+	});
+});
+$(function(){
+	$('#taxDataTran').blur(function(){
+		$('#taxDataTran').attr('type', 'text');
+		tAllwOrig = parseFloat($('#taxDataTran').val());
+
+		var tAllwFig = $('#taxDataTran').val();
+		var tAllwFmt = new Number(tAllwFig);
+
+		var tAllwFmtFinal = tAllwFmt.toLocaleString('en-US');
+		$('#taxDataTran').val(tAllwFmtFinal);
+		computeTaxFunction();
+	});
+});
+$(function(){
+	$('#taxDataTran').focus(function(){
+		$('#taxDataTran').attr('type', 'number');
+		$('#taxDataTran').val(tAllwOrig);
+	});
+});
+$(function(){
+	$('#taxDataOthers').blur(function(){
+		$('#taxDataOthers').attr('type', 'text');
+		oAllwOrig = parseFloat($('#taxDataOthers').val());
+
+		var oAllwFig = $('#taxDataOthers').val();
+		var oAllwFmt = new Number(oAllwFig);
+
+		var oAllwFmtFinal = oAllwFmt.toLocaleString('en-US');
+		$('#taxDataOthers').val(oAllwFmtFinal);
+		computeTaxFunction();
+	});
+});
+$(function(){
+	$('#taxDataOthers').focus(function(){
+		$('#taxDataOthers').attr('type', 'number');
+		$('#taxDataOthers').val(oAllwOrig);
+	});
+});
+$(function(){
+	$('#taxDataNonTax').blur(function(){
+		$('#taxDataNonTax').attr('type', 'text');
+		nAllwOrig = parseFloat($('#taxDataNonTax').val());
+
+		var nAllwFig = $('#taxDataNonTax').val();
+		var nAllwFmt = new Number(nAllwFig);
+
+		var nAllwFmtFinal = nAllwFmt.toLocaleString('en-US');
+		$('#taxDataNonTax').val(nAllwFmtFinal);
+		computeTaxFunction();
+	});
+});
+$(function(){
+	$('#taxDataNonTax').focus(function(){
+		$('#taxDataNonTax').attr('type', 'number');
+		$('#taxDataNonTax').val(nAllwOrig);
+	});
+});
+//------- /Format Input figures---------/
+
+
+function computeTaxFunction(){
+	//var bAllw = parseInt(tax_Data[0].value);
+	var bAllw = parseInt(bAllwOrig);
 	if (isNaN(bAllw) || bAllw == ""){bAllw = 0;
 	} else {bAllw = bAllw;}
 	tem_bAllw = bAllw;
 
-	var hAllw = parseInt(tax_Data[1].value);
+	//var hAllw = parseInt(tax_Data[1].value);
+	var hAllw = parseInt(hAllwOrig);
 	if (isNaN(hAllw) || hAllw == ""){hAllw = 0;
 	} else {hAllw = hAllw;}
 	tem_hAllw = hAllw;
 
-	var tAllw = parseInt(tax_Data[2].value);
+	//var tAllw = parseInt(tax_Data[2].value);
+	var tAllw = parseInt(tAllwOrig);
 	if (isNaN(tAllw) || tAllw == ""){tAllw = 0;
 	} else {tAllw = tAllw;}
 	tem_tAllw = tAllw;
 
-	var oAllw = parseInt(tax_Data[3].value);
+	//var oAllw = parseInt(tax_Data[3].value);
+	var oAllw = parseInt(oAllwOrig);
 	if (isNaN(oAllw) || oAllw == ""){oAllw = 0;
 	} else {oAllw = oAllw;}
 	tem_oAllw = oAllw;
 
-	var nAllw = parseInt(tax_Data[4].value);
+	//var nAllw = parseInt(tax_Data[4].value);
+	var nAllw = parseInt(nAllwOrig);
 	if (isNaN(nAllw) || nAllw == ""){nAllw = 0;
 	} else {nAllw = nAllw;}
 	tem_nAllw = nAllw;
@@ -134,9 +261,40 @@ $(function(){
 	tax_Band[4].innerHTML = tax_Result[26]+' @21%';
 	tax_Band[5].innerHTML = tax_Result[27]+' @24%';
 	}
+}
+//-------Attaching Events on the check/radio buttons-------/
+$(function(){
+	$('#aCheckmark').change(function(){
+	computeTaxFunction();
+	});
+});
+$(function(){
+	$('#mCheckmark').change(function(){
+	computeTaxFunction();
+	});
+});
+$(function(){
+	$('#aFCheckmark').change(function(){
+	computeTaxFunction();
+	});
+});
+$(function(){
+	$('#mFCheckmark').change(function(){
+	computeTaxFunction();
+	});
+});
+$(function(){
+	$('#cbox1').change(function(){
+	computeTaxFunction();
+	});
+});
+$(function(){
+	$('#cbox2').change(function(){
+	computeTaxFunction();
 	});
 });
 
+//-------/Attaching Events on the check/radio buttons-------/
 $(function(){
 	$('#recallFigs').click(function(){
 	tax_Data[0].value = tem_bAllw;
@@ -144,11 +302,29 @@ $(function(){
 	tax_Data[2].value = tem_tAllw;
 	tax_Data[3].value = tem_oAllw;
 	tax_Data[4].value = tem_nAllw;
+
+	bAllwOrig = tem_bAllw;
+	hAllwOrig = tem_hAllw;
+	tAllwOrig = tem_tAllw;
+	oAllwOrig = tem_oAllw;
+	nAllwOrig = tem_nAllw;
 	});
 });
 
 $(function(){
+	$('#page3HeaderIconL').click(function(){
+		resetTaxDataFigures();
+	});
+});
+
+var dataReset = false;
+$(function(){
 	$('#resetFigs').click(function(){
+		resetTaxDataFigures();
+	});
+});
+
+function resetTaxDataFigures(){
 	tax_result[0].innerHTML = '00.00';
 	tax_result[1].innerHTML = '00.00';
 	tax_result[2].innerHTML = '00.00';
@@ -161,8 +337,14 @@ $(function(){
 	tax_Data[2].value = "";
 	tax_Data[3].value = "";
 	tax_Data[4].value = "";
-});
-});
+	bAllwOrig = "";
+	hAllwOrig = "";
+	tAllwOrig = "";
+	oAllwOrig = "";
+	nAllwOrig = ""; 
+
+	dataReset = true;
+}
 
 
 function payeeCalculator(pen, nHF, bAllow, hAllow, tAllow, oAllow, nonTaxable, annualResult, monthlyResult, annualAllowanceSel, monthlyAllowanceSel){
@@ -403,7 +585,7 @@ function goToPage2(){ location.replace("#page2"); }
 function go2Prev(){	history.back(); }
 function goSlashScrn(){	location.replace("#spashScreen2Page"); }
 
-
+function goToPage9(){ location.replace("#page9"); }
 
 function fadingVerses(){setInterval(function(){
 	$("#dailyPass").hide();
